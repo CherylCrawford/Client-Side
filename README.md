@@ -1,3 +1,7 @@
+# Welcome to CherylCrawford/Client-Side Programming Homework Assignments
+
+- https://cherylcrawford.github.io/Client-Side/HW02 Convert Temperature
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/CherylCrawford/Client-Side/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
