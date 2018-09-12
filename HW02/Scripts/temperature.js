@@ -47,7 +47,7 @@ var Temperature = /** @class */ (function () {
         // return response
         document.getElementById("demo").innerHTML = txt;
     };
-    //  bounds check and input prompt
+    // bounds check and input prompt
     Temperature.min = -100; // minimum value
     Temperature.max = +212; // maximum value
     Temperature.promptStr = "Enter Fahrenheit temperature";

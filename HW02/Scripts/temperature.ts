@@ -15,7 +15,7 @@ class Temperature {
     Fahrenheit: number; // Fahrenheit temperature internal storage
     Celsius: number; // Celsius temperature internal storage
 
-    //  bounds check and input prompt
+    // bounds check and input prompt
     static readonly min = -100; // minimum value
     static readonly max = +212; // maximum value
     static readonly promptStr = "Enter Fahrenheit temperature";
