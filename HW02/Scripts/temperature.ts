@@ -33,11 +33,10 @@ class Temperature {
 
     // method getFahrenheit inputs Fahrenheit and displays Celsius
     getFahrenheit() {
-        var txt;
-        var fah;
+        let txt: string;
 
         for (; ;) {
-            fah = prompt(Temperature.promptStr);
+            let fah = prompt(Temperature.promptStr);
 
             // test for null input
             if (fah == null || fah == "") {

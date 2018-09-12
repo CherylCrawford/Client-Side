@@ -18,9 +18,8 @@ var Temperature = /** @class */ (function () {
     // method getFahrenheit inputs Fahrenheit and displays Celsius
     Temperature.prototype.getFahrenheit = function () {
         var txt;
-        var fah;
         for (;;) {
-            fah = prompt(Temperature.promptStr);
+            var fah = prompt(Temperature.promptStr);
             // test for null input
             if (fah == null || fah == "") {
                 txt = "User cancelled the prompt";
