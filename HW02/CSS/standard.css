@@ -1,0 +1,26 @@
+/* line 1, ../SCSS/standard.scss */
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #CCCCCC;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* line 11, ../SCSS/standard.scss */
+input[type=button] {
+  background-color: green;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* line 21, ../SCSS/standard.scss */
+input[type=button]:hover {
+  background-color: blue;
+}
