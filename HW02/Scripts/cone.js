@@ -5,11 +5,11 @@
 // (MIT) that can be found in the LICENSE file.           //
 //                                                        //
 // By:  Sherrie Teague                                    //
-// On:  Sept 1, 2018                                      //
+// On:  Sept 2, 2018                                      //
 // For: Web Client-Side Programming - HW02                //
 // /////////////////////////////////////////////////////////
 // Sample code copied from Code910/cone.js provided
-//  by Professor
+//  by Professor Shane May
 "use strict";
 // function identifier(param1, param2, etc...) {
 function surfaceArea(radius, height) {
