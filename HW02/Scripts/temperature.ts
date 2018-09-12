@@ -68,17 +68,20 @@ class Temperature {
     }
 }
 
+function doit() {
+    // construct temperature
+    let temperature = new Temperature();
 
-// construct temperature
-let temperature = new Temperature();
+    // define button
+    let button = document.createElement('button');
+    button.textContent = "Convert Temperature";
+    button.onclick = function () {
+        alert(temperature.getFahrenheit());
+    };
 
-// define button
-let button = document.createElement('button');
-button.textContent = "Convert Temperature";
-button.onclick = function () {
-    alert(temperature.getFahrenheit());
-};
+    document.body.appendChild(button);
+}
 
+doit();
 
-document.body.appendChild(button);
 

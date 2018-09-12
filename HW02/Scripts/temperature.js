@@ -57,12 +57,15 @@ var Temperature = /** @class */ (function () {
     Temperature.divisor = 9.0; // divisor calculates final conversion from Fahrenheit to Celsius
     return Temperature;
 }());
-// construct temperature
-var temperature = new Temperature();
-// define button
-var button = document.createElement('button');
-button.textContent = "Convert Temperature";
-button.onclick = function () {
-    alert(temperature.getFahrenheit());
-};
-document.body.appendChild(button);
+function doit() {
+    // construct temperature
+    var temperature = new Temperature();
+    // define button
+    var button = document.createElement('button');
+    button.textContent = "Convert Temperature";
+    button.onclick = function () {
+        alert(temperature.getFahrenheit());
+    };
+    document.body.appendChild(button);
+}
+doit();
