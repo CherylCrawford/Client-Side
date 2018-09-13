@@ -15,11 +15,6 @@ class Temperature {
     Fahrenheit: number; // Fahrenheit temperature internal storage
     Celsius: number; // Celsius temperature internal storage
 
-    // bounds check and input prompt
-    static readonly min = -100; // minimum value
-    static readonly max = +212; // maximum value
-    static readonly promptStr = "Enter Fahrenheit temperature";
-
     // formula is Celsius = (Fahrenheit - Offset) * multiplier / divisor
     static readonly offset = 32.0; // difference between Fahrenheit and Celsius
     static readonly multiplier = 5.0; // multiplier to convert Fahrenheit to Celsius
@@ -34,9 +29,14 @@ class Temperature {
     // method getFahrenheit inputs Fahrenheit and displays Celsius
     getFahrenheit() {
         let txt: string;
+        const promptStr = "Enter Fahrenheit temperature";
+
+        // bounds check and input prompt
+        const min = -100; // minimum value
+        const max = +212; // maximum value
 
         for (; ;) {
-            let fah = prompt(Temperature.promptStr);
+            let fah = prompt(promptStr);
 
             // test for null input
             if (fah == null || fah == "") {
@@ -46,7 +46,7 @@ class Temperature {
                 this.Fahrenheit = Number(fah);
 
                 // bounds check
-                if ((Temperature.min <= this.Fahrenheit) && (this.Fahrenheit <= Temperature.max)) {
+                if ((min <= this.Fahrenheit) && (this.Fahrenheit <= max)) {
                     // calculate Celsius
                     this.Celsius = (this.Fahrenheit - Temperature.offset) * Temperature.multiplier / Temperature.divisor;
 

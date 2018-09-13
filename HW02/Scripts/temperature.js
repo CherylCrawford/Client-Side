@@ -18,8 +18,12 @@ var Temperature = /** @class */ (function () {
     // method getFahrenheit inputs Fahrenheit and displays Celsius
     Temperature.prototype.getFahrenheit = function () {
         var txt;
+        var promptStr = "Enter Fahrenheit temperature";
+        // bounds check and input prompt
+        var min = -100; // minimum value
+        var max = +212; // maximum value
         for (;;) {
-            var fah = prompt(Temperature.promptStr);
+            var fah = prompt(promptStr);
             // test for null input
             if (fah == null || fah == "") {
                 txt = "User cancelled the prompt";
@@ -28,7 +32,7 @@ var Temperature = /** @class */ (function () {
             else { // evaluate user input
                 this.Fahrenheit = Number(fah);
                 // bounds check
-                if ((Temperature.min <= this.Fahrenheit) && (this.Fahrenheit <= Temperature.max)) {
+                if ((min <= this.Fahrenheit) && (this.Fahrenheit <= max)) {
                     // calculate Celsius
                     this.Celsius = (this.Fahrenheit - Temperature.offset) * Temperature.multiplier / Temperature.divisor;
                     // display text
@@ -46,10 +50,6 @@ var Temperature = /** @class */ (function () {
         // return response
         document.getElementById("demo").innerHTML = txt;
     };
-    // bounds check and input prompt
-    Temperature.min = -100; // minimum value
-    Temperature.max = +212; // maximum value
-    Temperature.promptStr = "Enter Fahrenheit temperature";
     // formula is Celsius = (Fahrenheit - Offset) * multiplier / divisor
     Temperature.offset = 32.0; // difference between Fahrenheit and Celsius
     Temperature.multiplier = 5.0; // multiplier to convert Fahrenheit to Celsius
