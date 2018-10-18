@@ -1,0 +1,31 @@
+HW05  Outline 
+
+For this assignment we will create a reservation form with complete validation.
+
+1.  Starting with the basic HTML 5 Template (index.html) on Canvas, create an application that looks similar to the one below.
+
+2.  Use Jquery for all DOM manipulation and event handlers.
+3.  All JavaScript should be in an external JS file.
+4.  Code a statement that moves the focus to the Arrival date text box.
+5.  Code an event handler for the submit event of the form.
+6.  This event handler should validate the user entries and cancel the submission of the form if any of the entries are invalid.
+7.  The validation is as follows:
+      A value must be entered into each text box.
+      The number of nights must be numeric.
+      The email address must match the pattern that’s provided.
+      var emailPattern = /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b/;
+	  Be sure to trim the entries and put them back into the controls regardless of whether the entries are valid.
+	  
+8.  Do not forget your JSDoc!
+9.  Do not forget to put a comment at the top of the code file with your name and assignment.
+10. Do not forget to validate both your HTML and your CSS files.
+
+Documentation: 
+
+11.  You will need to create a document (.docx, .rtf, .pdf) which contains the following:
+       A screenshot of your page running on your local webserver. Your screenshot needs to include the address bar 
+	   with the localhost url and show all the validation messages
+       You will need to validate the index.html and your CSS file using the validator (link on Canvas) and include 
+       a screenshot of the successful validation (Green Bar).
+12.  You need to submit your index.html, CSS file, and your external JS file along with your Document. Make sure your 
+	   document is in the correct form and includes your name. 
