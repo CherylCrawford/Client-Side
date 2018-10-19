@@ -1,0 +1,52 @@
+/* standard.css
+ * student: Sherrie Teague 
+ * date: 10/18/2018
+ * class: Client-Side Programming 
+ * assignment: Reservation Form HW05
+*/ 
+
+legend { 
+    color: blue;
+  font-weight: bold;
+    display: block;
+    padding-left: 2px;
+    padding-right: 2px;
+    border: none;
+}
+
+fieldset {
+  color: darkslategray;
+  padding: 10px;
+  margin:20px;
+}
+
+form {
+  width:530px;
+}
+
+input,select {
+  margin: 6px;
+}
+
+div {
+  display: inline-block;
+  margin: 4px;
+}
+
+checkbox {
+  margin:
+}
+
+span {
+  color: #B00020;
+}
+
+#submitButton {
+  margin: 0 0 0 20px;
+  border: 2px solid darkslategray;
+  padding: 4px 32px 4px 32px; 
+}
+
+p {
+  min-width: 40em;
+}

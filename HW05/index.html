@@ -1,44 +1,73 @@
 <!doctype html>
-<!--The Cafe - HW04 
+<!--Reservation Form - HW05
 student - Sherrie Teague
-10/09/2018-->
+10/18/2018-->
 
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <title>ClientSideHW04</title>
-  <meta name="description" content="The Cafe">
+  <title>ClientSideHW05</title>
+  <meta name="description" content="Reservation Form">
   <meta name="author" content="Sherrie Teague">
   <link rel="stylesheet" href="CSS/standard.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <!-- https://stackoverflow.com/questions/20180251/when-to-use-window-onload
    * using defer rather than using window.onload
    -->
-  <script src="Scripts/TheCafe.js" defer></script>
+  <script src="Scripts/ReservationForm.js" defer></script>
 </head>
 
 <body>
   <section>
-    <img src="Images/logo.png" alt="">
-    <hr>
-    <h2>Menu</h2>
-    <p>Click an item to add it to your order</p>
-    <img src="Images/biscotti.jpg" alt="biscotti" id="biscotti">
-    <img src="Images/cappuccino.jpg" alt="cappuccino" id="cappuccino">
-    <img src="Images/coffee.jpg" alt="coffee" id="coffee">
-    <img src="Images/espresso.jpg" alt="espresso" id="espresso">
-    <img src="Images/latte.jpg" alt="latte" id="latte">
-    <img src="Images/scone.jpg" alt="scone" id="scone">
-    <h2>Your Order</h2>
-    <select id="myCafeListBox" name="myCafeListBox" size="6">
-    </select>
-    <p> Total: $<span id="totalAmount">0</span> </p>
-    <input type="button" id="placeOrderButton" name="placeOrderButton" value="Place Order" /> &nbsp;
-    <input type="button" id="clearOrderButton" name="clearOrderButton" value="Clear Order" />
+    <form>
+      <fieldset>
+        <legend>General Information</legend>
+        Arrival Date:
+  <input type="date" name="Arrival Date"><br> 
+        Nights: <input type="number" name="nights" min="1"><br> 
+        Adults: <select>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+</select>
+</select><br> 
+        Children: <select> 
+  <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+     </select>
+      </fieldset>
+      <fieldset>
+        <legend>Preferences</legend>
+        Room Type:  <div id="roomType">
+        <input type="radio" value="Standard" name="standard">Standard
+        <input type="radio" value="Business" name="business">Business
+        <input type="radio" value="Suite" name="suite">Suite
+        </div><br> 
+        Bed Type:  <div id="bedType">
+        <input type="radio" value="King" name="king">King
+        <input type="radio" value="Double Double" name="doubleDouble">Double Double
+        </div><br>
+  <input type="checkbox" name="smoking" value="Smoking"> Smoking <br>
+      </fieldset>
+      <fieldset>
+        <legend>Contact Information</legend>
+        Name: <input type="text"><br> 
+        Email: <input type="search" name="email"><span>Must be a valid email address.</span><br> Phone: <input type="tel" name="phone"><span>This field is required.</span>
+      </fieldset>
+      <input type="button" id="submitButton" value="Submit Request" /> &nbsp;
+    </form>
 
   </section>
-
 </body>
 
 </html>
