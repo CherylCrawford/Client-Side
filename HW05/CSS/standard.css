@@ -17,15 +17,16 @@ legend {
 fieldset {
   color: darkslategray;
   padding: 10px;
-  margin:20px;
+  margin: 20px;
 }
 
 form {
-  width:530px;
+  width:560px;
 }
 
 input,select {
-  margin: 6px;
+  margin: 6px; 
+  margin-right: 2px;
 }
 
 div {
@@ -33,12 +34,13 @@ div {
   margin: 4px;
 }
 
-checkbox {
-  margin:
+#smokingId {
+  margin-left: 1px; 
 }
 
-span {
+.errorMsg {
   color: #B00020;
+  padding-left: 10px; 
 }
 
 #submitButton {
@@ -47,6 +49,47 @@ span {
   padding: 4px 32px 4px 32px; 
 }
 
-p {
-  min-width: 40em;
+.width40 {
+  width:100px;
+  color:blue;
+}
+
+#arrivalDateId {
+  margin-left: 5px;
+  padding-right: 28px;
+}
+
+#numberNightsId {
+  margin-left: 44px; 
+  
+}
+
+#numberAdultsId {
+  margin-left: 44px; 
+  padding-right: 6px;
+}
+
+#numberChildrenId {
+  margin-left:35px;
+  padding-right: 6px;
+}
+
+#bedTypeId {
+  padding-left: 15px;
+}
+
+#roomTypeId {
+  padding-left: 2px; 
+}
+
+#nameId, #emailId, #phoneId {
+  margin-left: 48px;
+}
+
+.valid {
+  color: black;
+}
+
+.invalid {
+  color: #bb0020; 
 }

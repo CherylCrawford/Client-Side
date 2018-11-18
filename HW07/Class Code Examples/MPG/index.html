@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Template Page</title>
+		<meta name="description" content="Template Page">
+		<meta name="author" content="studentName">
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript">
+            "use strict";
+            // object identifiers will be PascalCase
+            // this object syntax is Object Literal (uses JSON)
+            // the issue with the syntax is we can only have this ONE object
+            // we cannot "create" multiple copies of it.
+            // var FuelEfficiency = {
+            //     miles : 0.0,
+            //     gallons : 0.0,
+            //     getMpg : function() {
+            //         if (this.gallons === 0.0) {
+            //             return 0.0;
+            //         } else {
+            //             return this.miles / this.gallons;
+            //         }
+            //     }
+            // };
+
+
+            // lets create a class that will allow me to make multiple
+            // copies of it (objects)
+            // we start with a function called a constructor.
+            var FuelEfficiency = function(miles, gallons) {
+                this.miles = miles;
+                this.gallons = gallons;
+            };
+
+            // prototype is the mechanism by which we can add things to a class.
+            FuelEfficiency.prototype.getMpg = function() {
+                if (this.gallons === 0.0) {
+                    return 0.0;
+                } else {
+                    return this.miles / this.gallons;
+                }
+            };
+
+            $(function() {
+                $("#mpgForm").submit(function (event) {
+                   var miles = parseFloat($("#miles").val());
+                   var gallons = parseFloat($("#gallons").val());
+                   // FuelEfficiency.miles = miles;
+                   // FuelEfficiency.gallons = gallons;
+                    var efficiency = new FuelEfficiency(miles, gallons);
+                    $("#mpg").val(efficiency.getMpg());
+                   //$("#mpg").val(FuelEfficiency.getMpg());
+                   event.preventDefault();
+                });
+
+                $("#clear").click(function () {
+                   $("#miles").focus();
+                });
+            });
+
+        </script>
+    </head>
+	<body>
+        <section>
+            <form id="mpgForm" name="mpgForm" action="#">
+                <label for="miles">Miles </label>
+                <input type="text" id="miles" name="miles" required autofocus />
+                <br />
+                <label for="gallons">Gallons </label>
+                <input type="text" id="gallons" name="gallons" required />
+                <br />
+                <label for="mpg">MPG </label>
+                <input type="text" id="mpg" name="mpg" disabled />
+                <br />
+                <input type="submit" value="Calculate" id="calculate" name="calculate" />
+                &nbsp; | &nbsp;
+                <input type="reset" value="Clear" id="clear" name="clear" />
+            </form>
+        </section>
+	</body>
+</html>

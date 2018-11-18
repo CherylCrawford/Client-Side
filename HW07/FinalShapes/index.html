@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Template Page</title>
+		<meta name="description" content="Template Page">
+		<meta name="author" content="studentName">
+		<link type="text/css" rel="stylesheet"
+			  href="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/themes/blitzer/jquery-ui.css" />
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+		<script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/jquery-ui.min.js"></script>
+		<script src="scripts/library_circle.js"></script>
+		<script src="scripts/library_rectangle.js"></script>
+        <script>
+            $(function() {
+                var menu = $("#shape");
+
+                $("#circleSubmit").click(function (event) {
+
+					var radius = parseFloat($("#radius").val());
+					// this creates an instance (object) of type Circle.
+					// notice we use the new operator when we call the function (Constructor)
+					var circle = new Circle(radius);
+					$("#circleResult").text(circle.toString());
+                    event.preventDefault();
+                });
+
+                $("#rectangleSubmit").click(function (event) {
+
+                    var length = parseFloat($("#length").val());
+                    var width = parseFloat($("#width").val());
+                    var rectangle = new Rectangle(length, width);
+                    $("#rectangleResult").text(rectangle.isSquare());
+                    event.preventDefault();
+                });
+
+                $("#rectangle").hide();
+                menu.selectmenu();
+                menu.on("selectmenuchange", function() {
+                    var value = parseInt(this.value);
+                    if (value === 0) {
+                        $("#rectangle").fadeOut("fast", function() {
+                            $("#circle").fadeIn("fast");
+                        });
+                    } else if (value === 1) {
+                        $("#circle").fadeOut("fast", function() {
+                            $("#rectangle").fadeIn("fast");
+                        });
+                    } // else, doNothing();
+                });
+            });
+        </script>
+    </head>
+	<body>
+        <section>
+			<fieldset>
+				<legend>Shape</legend>
+				<select name="shape" id="shape">
+					<option value="0" selected="selected">Circle</option>
+					<option value="1">Rectangle</option>
+				</select>
+			</fieldset>
+        </section>
+		<section id="circle">
+			<form id="circleForm" name="circleForm" action="#">
+				<label for="radius" class="ui-state-highlight">Radius</label>
+				<br />
+				<input type="text" id="radius" name="radius" required />
+				<br />
+				<input type="submit" id="circleSubmit" name="circleSubmit"
+					   class="ui-button ui-widget ui-corner-all" />
+				<div id="circleResult">
+					&nbsp;
+				</div>
+			</form>
+		</section>
+        <section id="rectangle">
+            <form id="rectangleForm" name="rectangleForm" action="#">
+                <label for="length" class="ui-state-highlight">Length</label>
+                <br />
+                <input type="text" id="length" name="length" required />
+                <br />
+                <label for="width" class="ui-state-highlight">Width</label>
+                <br />
+                <input type="text" id="width" name="width" required />
+                <br />
+                <input type="submit" id="rectangleSubmit" name="rectangleSubmit"
+                       class="ui-button ui-widget ui-corner-all" />
+                <div id="rectangleResult">
+                    &nbsp;
+                </div>
+            </form>
+        </section>
+	</body>
+</html>

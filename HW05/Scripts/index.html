@@ -20,11 +20,11 @@ student - Sherrie Teague
 
 <body>
   <section>
-    <form id="reservation_form">
+    <form id="reservation_form"> 
       <fieldset>
         <legend>General Information</legend>
         <label for="arrivalDateId">Arrival Date:</label>
-        <input id="arrivalDateId" type="date" name="Arrival Date" autofocus value="2018-10-26" min="2018-10-26" max="2019-12-31" /><br>
+        <input id="arrivalDateId" type="date" name="Arrival Date" autofocus /><br>
         <label for="numberNightsId"> Nights:</label>
         <input id="numberNightsId" type="number" name="nights" min="1"><br>
         <label for="numberAdultsId">Adults:</label>
@@ -51,6 +51,10 @@ student - Sherrie Teague
 
       <fieldset>
         <legend>Preferences</legend>
+
+
+        <!-- Gave identical name to buttons in each group 10/21 Sunday 10:40pm-->
+
         <div id="roomTypeId">
           <label for="standardId">Room Type:</label>
           <input type="radio" id="standardId" value="Standard" name="room" checked />Standard
@@ -78,7 +82,7 @@ student - Sherrie Teague
         <span class="errorMsg">This field is required.</span>
       </fieldset>
 
-      <input type="submit" id="submitButton" value="Submit Request" /> &nbsp;
+      <input type="button" id="submitButton" value="Submit Request" /> &nbsp;
     </form>
 
   </section>
