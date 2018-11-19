@@ -1,95 +1,102 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>Template Page</title>
-		<meta name="description" content="Template Page">
-		<meta name="author" content="studentName">
-		<link type="text/css" rel="stylesheet"
-			  href="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/themes/blitzer/jquery-ui.css" />
-        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
-		<script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/jquery-ui.min.js"></script>
-		<script src="scripts/library_circle.js"></script>
-		<script src="scripts/library_rectangle.js"></script>
-        <script>
-            $(function() {
-                var menu = $("#shape");
 
-                $("#circleSubmit").click(function (event) {
+<head>
+  <meta charset="utf-8">
+  <title>Template Page</title>
+  <meta name="description" content="Template Page">
+  <meta name="author" content="studentName">
+  <link type="text/css" rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/themes/blitzer/jquery-ui.css" />
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="Scripts/objects.js" defer></script>
 
-					var radius = parseFloat($("#radius").val());
-					// this creates an instance (object) of type Circle.
-					// notice we use the new operator when we call the function (Constructor)
-					var circle = new Circle(radius);
-					$("#circleResult").text(circle.toString());
-                    event.preventDefault();
-                });
+</head>
 
-                $("#rectangleSubmit").click(function (event) {
-
-                    var length = parseFloat($("#length").val());
-                    var width = parseFloat($("#width").val());
-                    var rectangle = new Rectangle(length, width);
-                    $("#rectangleResult").text(rectangle.isSquare());
-                    event.preventDefault();
-                });
-
-                $("#rectangle").hide();
-                menu.selectmenu();
-                menu.on("selectmenuchange", function() {
-                    var value = parseInt(this.value);
-                    if (value === 0) {
-                        $("#rectangle").fadeOut("fast", function() {
-                            $("#circle").fadeIn("fast");
-                        });
-                    } else if (value === 1) {
-                        $("#circle").fadeOut("fast", function() {
-                            $("#rectangle").fadeIn("fast");
-                        });
-                    } // else, doNothing();
-                });
-            });
-        </script>
-    </head>
-	<body>
-        <section>
-			<fieldset>
-				<legend>Shape</legend>
-				<select name="shape" id="shape">
-					<option value="0" selected="selected">Circle</option>
-					<option value="1">Rectangle</option>
+<body>
+  <section>
+    <fieldset>
+      <legend>Shape</legend>
+      <select name="shape" id="shape">
+					<option value="0" selected="selected">D4</option>
+					<option value="1">D6</option>
+					<option value="2">D8</option>
+					<option value="3">D10</option>
+					<option value="3">D12</option>
+					<option value="3">D20</option>
 				</select>
-			</fieldset>
-        </section>
-		<section id="circle">
-			<form id="circleForm" name="circleForm" action="#">
-				<label for="radius" class="ui-state-highlight">Radius</label>
-				<br />
-				<input type="text" id="radius" name="radius" required />
-				<br />
-				<input type="submit" id="circleSubmit" name="circleSubmit"
-					   class="ui-button ui-widget ui-corner-all" />
-				<div id="circleResult">
-					&nbsp;
-				</div>
-			</form>
-		</section>
-        <section id="rectangle">
-            <form id="rectangleForm" name="rectangleForm" action="#">
-                <label for="length" class="ui-state-highlight">Length</label>
-                <br />
-                <input type="text" id="length" name="length" required />
-                <br />
-                <label for="width" class="ui-state-highlight">Width</label>
-                <br />
-                <input type="text" id="width" name="width" required />
-                <br />
-                <input type="submit" id="rectangleSubmit" name="rectangleSubmit"
-                       class="ui-button ui-widget ui-corner-all" />
-                <div id="rectangleResult">
-                    &nbsp;
-                </div>
-            </form>
-        </section>
-	</body>
+    </fieldset>
+
+
+    <p>
+      <label for="spinner">Value of the Roll:</label>
+      <input id="spinner" name="value">
+    </p>
+
+    <label for="minRoll">Min Roll:</label>
+    <input type="text" id="minRoll" name="minRoll" disabled />
+    <br />
+    <label for="maxRoll">Max Roll:</label>
+    <input type="text" id="maxRoll" name="maxRoll" disabled />
+    <br />
+
+
+  </section>
+  <section id="d4">
+    <form id="d4Form" name="d4Form" action="#">
+      <input type="submit" id="d4Submit" name="d4Submit" value="Roll D4 Dice" class="ui-button ui-widget ui-corner-all" />
+      <div id="d4Result">
+        &nbsp;
+      </div>
+    </form>
+  </section>
+
+  <section id="d6">
+    <form id="d6Form" name="d6Form" action="#">
+      <input type="submit" id="d6Submit" name="d6Submit" value="Roll D6 Dice" class="ui-button ui-widget ui-corner-all" />
+      <div id="d6Result">
+        &nbsp;
+      </div>
+    </form>
+  </section>
+
+  <section id="d8">
+    <form id="d8Form" name="d8Form" action="#">
+      <input type="submit" id="d8Submit" name="d8Submit" value="Roll D8 Dice" class="ui-button ui-widget ui-corner-all" />
+      <div id="d8Result">
+        &nbsp;
+      </div>
+    </form>
+  </section>
+
+  <section id="d10">
+    <form id="d10Form" name="d10Form" action="#">
+      <input type="submit" id="d10Submit" name="d10Submit" value="Roll D4 Dice" class="ui-button ui-widget ui-corner-all" />
+      <div id="d10Result">
+        &nbsp;
+      </div>
+    </form>
+  </section>
+
+  <section id="d12">
+    <form id="d12Form" name="d12Form" action="#">
+      <input type="submit" id="d12Submit" name="d12Submit" value="Roll D12 Dice" class="ui-button ui-widget ui-corner-all" />
+      <div id="d12Result">
+        &nbsp;
+      </div>
+    </form>
+  </section>
+
+  <section id="d20">
+    <form id="d20Form" name="d20Form" action="#">
+      <input type="submit" id="d20Submit" name="d20Submit" value="Roll D20 Dice" class="ui-button ui-widget ui-corner-all" />
+      <div id="d20Result">
+        &nbsp;
+      </div>
+    </form>
+  </section>
+  <div id="output"></div>
+
+</body>
+
 </html>
