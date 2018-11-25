@@ -5,10 +5,40 @@
 // assignment: HW07 objects
 
 class Die {
-
+  /** 
+   * @constructor 
+   * new Die 
+   * @param {Number} sides Number of sides on the dice. 
+   * @returns {Class} die 
+   */
   constructor(sides) {
     this.sides = sides;
   }
+
+  /** 
+   * rollingDice sets the values to spinner, minRoll, maxRoll, and randomNumber
+   * @returns {Number} randomNumber The number that is rolled on the dice. 
+   */
+  function rollingDice() {
+    var randomNumber = Math.floor(Math.random() * this.sides) + 1;
+
+    // set value of spinner equal to random number 
+    $("#spinner").text(randomNumber.toString());
+
+    var minRoll = $("#minRoll").val().trim();
+    var maxRoll = $("#maxRoll").val().trim();
+    if (minRoll == "") { // if min roll is blank then set min and max roll to random number
+      $("#minRoll").val(randomNumber.toString());
+      $("#maxRoll").val(randomNumber.toString());
+    } else if (randomNumber < minRoll.parseInt()) { // if random number is < min roll then set min roll to random number 
+      $("#minRoll").val(randomNumber.toString());
+    } else if (randomNumber > maxRoll.parseInt()) { // if random number is > max roll then set max roll to random number 
+      $("#maxRoll").val(randomNumber.toString());
+    }
+    return randomNumber;
+  }
+
+
 }
 
 /** 
@@ -33,37 +63,18 @@ function fadeOut(fadeIn) {
   });
 }
 
-/** 
- * rollingDice sets the values to spinner, minRoll, maxRoll, and randomNumber
- * @param {Number} sides The number of sides on the dice. 
- * @returns {Number} randomNumber The number that is rolled on the dice. 
- */
-function rollingDice(sides) {
-  var randomNumber = Math.floor(Math.random() * sides) + 1;
-
-  // set value of spinner equal to random number 
-  $("#spinner").text(randomNumber.toString());
-
-  var minRoll = $("#minRoll").val().trim();
-  var maxRoll = $("#maxRoll").val().trim();
-  if (minRoll == "") { // if min roll is blank then set min and max roll to random number
-    $("#minRoll").val(randomNumber.toString());
-    $("#maxRoll").val(randomNumber.toString());
-  } else if (randomNumber < minRoll.parseInt()) { // if random number is < min roll then set min roll to random number 
-    $("#minRoll").val(randomNumber.toString());
-  } else if (randomNumber > maxRoll.parseInt()) { // if random number is > max roll then set max roll to random number 
-    $("#maxRoll").val(randomNumber.toString());
-  }
-  return randomNumber;
-}
-
 
 $(function () {
   var menu = $("#shape");
+  var d4 = new Die(4);
+  var d6 = new Die(6);
+  var d8 = new Die(8);
+  var d10 = new Die(10);
+  var d12 = new Die(12);
+  var d20 = new Die(20);
 
   $("#d4Submit").click(function (event) {
-    var sides = 4;
-    var randomNumber = rollingDice(sides);
+    var randomNumber = d4.rollingDice();
 
     // display D4 with random number 
     var face = '<svg width="50" height="50"><polygon points="0,3 25,46 50,3" style="stroke: black; fill: none" /><text fill="black" x="20" y="26" font-family="Verdana" font-size="18">REPLACEME</text></svg>';
@@ -80,8 +91,7 @@ $(function () {
   });
 
   $("#d6Submit").click(function (event) {
-    var sides = 6;
-    var randomNumber = rollingDice(sides);
+    var randomNumber = d6.rollingDice();
 
     // display D6 with random number 
     var face = '<svg width="50" height="50"><polygon points="3,3 3,47 47,47 47,3" style="stroke: black; fill: none" /><text fill="black" x="20" y="30" font-family="Verdana" font-size="18">REPLACEME</text></svg>';
@@ -98,8 +108,7 @@ $(function () {
   });
 
   $("#d8Submit").click(function (event) {
-    var sides = 8;
-    var randomNumber = rollingDice(sides);
+    var randomNumber = d8.rollingDice();
 
     // display D8 with random number 
     var face = '<svg width="60" height="50"><polygon points="17,0 60,25 17,50 17,0 0,25 17,50" style="stroke: black; fill: none" /><text fill="black" x="25" y="30" font-family="Verdana" font-size="18">REPLACEME</text></svg>';
@@ -116,8 +125,7 @@ $(function () {
   });
 
   $("#d10Submit").click(function (event) {
-    var sides = 10;
-    var randomNumber = rollingDice(sides);
+    var randomNumber = d10.rollingDice();
 
     // display D10 with random number 
     var face = '<svg width="50" height="50"><polygon points="43,50 0,25 43,0 50,25" style="stroke: black; fill: none" /><text fill="black" x="20" y="30" font-family="Verdana" font-size="18">REPLACEME</text></svg>';
@@ -134,8 +142,7 @@ $(function () {
   });
 
   $("#d12Submit").click(function (event) {
-    var sides = 12;
-    var randomNumber = rollingDice(sides);
+    var randomNumber = d12.rollingDice();
 
     // display D12 with random number 
     var face = '<svg width="50" height="50"><polygon points="25,0 1,17 10,45 40,45 49,17" style="stroke: black; fill: none" /><text fill="black" x="13" y="30" font-family="Verdana" font-size="18">REPLACEME</text></svg>';
@@ -152,8 +159,7 @@ $(function () {
   });
 
   $("#d20Submit").click(function (event) {
-    var sides = 20;
-    var randomNumber = rollingDice(sides);
+    var randomNumber = d20.rollingDice();
 
     // display D20 with random number 
     var face = '<svg width="50" height="50"><polygon points="0,46 25,0 50,46" style="stroke: black; fill: none" /><text fill="black" x="13" y="40" font-family="Verdana" font-size="18">REPLACEME</text></svg>';
