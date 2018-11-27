@@ -1,25 +1,54 @@
-* {
-  font-family: Helvetica, Arial, sans-serif;
-  text-align: center;
+body {
+  margin-left: 50px;
+  margin-top: 20px;
+  padding: 20px;
+  /*width: 330px;*/
 }
 
-button {
-  background-color: rgb(82, 186, 179);
-  border-radius: 6px;
-  border: none;
-  color: rgb(255, 255, 255);
-  padding: 10px;
-  text-transform: uppercase;
+#minRoll {
+  margin-bottom: 20px;
+}
+
+input#minRoll {
+  margin-left: 73px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+#maxRoll {
+  margin-bottom: 30px;
+}
+
+input#maxRoll {
+  margin-left: 70px;
+}
+
+#spinner {
+  margin-top: 30px;
+}
+
+input#spinner {
+  margin-left: 13px;
+}
+
+legend {
+  font-size: 1.4em;
+  color: crimson;
+}
+
+.ui-button ui-widget ui-corner-all {
+  width: 500px;
+}
+
+section#submit {
   width: 200px;
-  cursor: pointer;
 }
 
-#placeholder {
-  height: 100px;
-  width: 100px;
-  padding: 50px;
-  margin: 50px auto;
-  border: 1px solid gray;
-  border-radius: 10px;
-  font-size: 80px;
+label {
+  font-size: 1.2em;
+  color: green;
+}
+
+label minRoll {
+  font-size: 300px;
 }
