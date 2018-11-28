@@ -9,21 +9,55 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>Web Client-Side Programming HW07 Objects </title>
-    <meta name="description" content="Web Client-Side Programming HW08 Pulling It All Together">
-    <meta name="author" content="Sherrie Teague">
-    <link rel="stylesheet" href="CSS/standard.css">
-    <link type="text/css" rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/themes/blitzer/jquery-ui.css" />
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
-    <script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/jquery-ui.min.js"></script>
-   <!-- The library files should be included in the index.html file in the
-    proper order, so each library is included after any libraries it depends
-    on. -->
-    <script src="Scripts/main.js" defer></script>
+  <meta charset="utf-8">
+  <title>Web Client-Side Programming HW07 Objects </title>
+  <meta name="description"
+        content="Web Client-Side Programming HW08 Pulling It All Together">
+  <meta name="author" content="Sherrie Teague">
+  <link rel="stylesheet" href="CSS/standard.css">
+  <link type="text/css" rel="stylesheet"
+        href="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/themes/blitzer/jquery-ui.css"/>
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/jquery-ui.min.js"></script>
+
+  <!-- The library files should be included in the index.html file in the
+   proper order, so each library is included after any libraries it depends
+   on. -->
+  <script src="Scripts/main.js" defer></script>
 </head>
 
 <body>
+<h1>Memory Game</h1>
+<a href="#">New Game</a>
+<span>Player:</span>
+<span id="name"></span>
+<span>High Score:</span>
+<span id="high_score"></span>
+<span>Correct:</span>
+<span id="correct"></span>
 
+<!-- Tab links -->
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')">London</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+</div>
+
+<!-- Tab content -->
+<div id="London" class="tabcontent">
+  <h3>London</h3>
+  <p>London is the capital city of England.</p>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <h3>Paris</h3>
+  <p>Paris is the capital of France.</p>
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
 </body>
+
 </html>

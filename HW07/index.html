@@ -17,6 +17,7 @@
   <link type="text/css" rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/themes/blitzer/jquery-ui.css" />
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
   <script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="Scripts/library_die.js"></script>
   <script src="Scripts/objects.js" defer></script>
 
 </head>
@@ -37,10 +38,12 @@
 
 
     <p>
-      <label for="spinner">Value of the Roll:</label>
-      <input id="spinner" name="value">
+      <label for="spinner">Spinner:</label>
+      <input type="spinner" id="spinner" name="value" disabled/>
     </p>
-
+    <label for="thisRoll">Value of the Roll:</label>
+    <input type="text" id="thisRoll" name="value" disabled />
+    <br />
     <label for="minRoll">Min Roll:</label>
     <input type="text" id="minRoll" name="minRoll" disabled />
     <br />
