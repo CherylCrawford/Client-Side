@@ -2,53 +2,57 @@ body {
   margin-left: 50px;
   margin-top: 20px;
   padding: 20px;
-  /*width: 330px;*/
+  width: 330px;
 }
+
+
 
 #minRoll {
   margin-bottom: 20px;
-}
-
-input#minRoll {
-  margin-left: 73px;
-  margin-bottom: 20px;
-  margin-top: 20px;
 }
 
 #maxRoll {
   margin-bottom: 30px;
 }
 
+
+
 input#maxRoll {
-  margin-left: 70px;
+  /*margin-left: 70px;*/
 }
 
-#spinner {
-  margin-top: 30px;
+input#minRoll {
+  /*margin-left: 73px;*/
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 input#spinner {
   margin-left: 13px;
 }
 
+
+#spinner {
+  margin-top: 30px;
+}
+
 legend {
   font-size: 1.4em;
   color: crimson;
-}
-
-.ui-button ui-widget ui-corner-all {
-  width: 500px;
-}
-
-section#submit {
-  width: 200px;
+  font-family: georgia;
 }
 
 label {
-  font-size: 1.2em;
+  font-size: 1.1em;
   color: green;
+  font-family: georgia;
 }
 
-label minRoll {
-  font-size: 300px;
+label#minRoll {
+  margin-left: 30px;
+}
+
+
+#shape-button {
+  width: 258px;
 }
