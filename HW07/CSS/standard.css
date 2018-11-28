@@ -18,7 +18,7 @@ body {
 
 
 input#maxRoll {
-  margin-left: 14px;
+  margin-left: 13px;
 }
 
 input#minRoll {
@@ -48,11 +48,19 @@ label {
   font-family: georgia;
 }
 
-label #minRoll {
+section > label {
   margin-left: 60px;
 }
 
+#output {
+  margin-left: 208px;
+  margin-top: 20px;
+}
 
 #shape-button {
   width: 258px;
+}
+
+form {
+  margin-left: 166px;
 }
