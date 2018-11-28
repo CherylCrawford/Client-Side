@@ -1,6 +1,6 @@
 body {
   margin-left: 50px;
-  margin-top: 20px;
+  margin-top: 30px;
   padding: 20px;
   width: 330px;
 }
@@ -18,17 +18,17 @@ body {
 
 
 input#maxRoll {
-  /*margin-left: 70px;*/
+  margin-left: 14px;
 }
 
 input#minRoll {
-  /*margin-left: 73px;*/
+  margin-left: 14px;
   margin-bottom: 20px;
   margin-top: 20px;
 }
 
 input#spinner {
-  margin-left: 13px;
+  margin-left: 14px;
 }
 
 
@@ -48,8 +48,8 @@ label {
   font-family: georgia;
 }
 
-label#minRoll {
-  margin-left: 30px;
+label #minRoll {
+  margin-left: 60px;
 }
 
 
