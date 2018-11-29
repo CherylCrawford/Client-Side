@@ -4,13 +4,7 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="57a67c5a-f650-4435-8edc-7f9c3b5c25e3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW02/CSS/standard.css" beforeDir="false" afterPath="$PROJECT_DIR$/HW02/CSS/standard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW07/Scripts/objects.js" beforeDir="false" afterPath="$PROJECT_DIR$/HW07/Scripts/objects.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW07/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/HW07/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW07/submit/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/HW07/submit/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="57a67c5a-f650-4435-8edc-7f9c3b5c25e3" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -21,14 +15,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.9">
+    <splitter split-orientation="horizontal" split-proportion="0.88920057">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/HW07/Scripts/objects.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1680">
-                  <caret line="88" column="48" lean-forward="true" selection-start-line="88" selection-start-column="48" selection-end-line="88" selection-end-column="48" />
+                <state relative-caret-position="-220">
+                  <caret line="11" column="51" lean-forward="true" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
                   <folding>
                     <element signature="n#style#0;n#polygon#0;n#svg#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#polygon#0;n#svg#0;n#!!top" expanded="true" />
@@ -48,7 +42,7 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/HW07/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="236">
+                <state relative-caret-position="296">
                   <caret line="25" column="6" lean-forward="true" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
                 </state>
               </provider>
@@ -92,7 +86,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="104" />
     <option name="y" value="9" />
     <option name="width" value="1400" />
@@ -211,7 +205,7 @@
       <workItem from="1536724773476" duration="5689000" />
       <workItem from="1543368685640" duration="5908000" />
       <workItem from="1543465607444" duration="94000" />
-      <workItem from="1543465860563" duration="14084000" />
+      <workItem from="1543465860563" duration="15152000" />
     </task>
     <task id="LOCAL-00001" summary="Created temperature.ts and edited index.html">
       <created>1536728278031</created>
@@ -252,10 +246,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29904000" />
+    <option name="totallyTimeSpent" value="30972000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.09632446" />
@@ -424,15 +418,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HW07/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
+        <state relative-caret-position="296">
           <caret line="25" column="6" lean-forward="true" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HW07/Scripts/objects.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1680">
-          <caret line="88" column="48" lean-forward="true" selection-start-line="88" selection-start-column="48" selection-end-line="88" selection-end-column="48" />
+        <state relative-caret-position="-220">
+          <caret line="11" column="51" lean-forward="true" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
           <folding>
             <element signature="n#style#0;n#polygon#0;n#svg#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#polygon#0;n#svg#0;n#!!top" expanded="true" />
