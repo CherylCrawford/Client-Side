@@ -4,37 +4,13 @@
 // class: Client-Side Programming
 // assignment: HW07 objects
 
-class Die {
-  /** 
-   * @constructor 
-   * new Die 
-   * @param {Number} sides Number of sides on the dice. 
-   * @returns {Class} die 
-   */
-  constructor(sides) {
-    this.sides = sides;
-  }
-
-  /** 
-   * rollingDice sets the values to spinner, minRoll, maxRoll, and randomNumber
-   * @returns {Number} randomNumber The number that is rolled on the dice. 
-   */
-  rollingDice() {
-    var randomNumber = Math.floor(Math.random() * this.sides) + 1;
-
-
-    return randomNumber;
-  }
-};
-
-
 /*
  * displayResult sets the value of spinner and updates minRoll and/or maxRoll
  * @param {Number} thisRoll The number of the current roll. 
  */
 function displayResult(thisRoll) {
   // set value of spinner equal to thisRoll
-  $("#spinner").val(thisRoll.toString());
+  $("#thisRoll").val(thisRoll.toString());
 
   var minRollId = $("#minRoll"); // looking up minRoll element 
   var maxRollId = $("#maxRoll"); // looking up maxRoll element
@@ -203,20 +179,27 @@ $(function () {
   $("#d10").hide();
   $("#d12").hide();
   $("#d20").hide();
+  $("#spinner").val("4");
   menu.selectmenu();
   menu.on("selectmenuchange", function () {
     var value = parseInt(this.value);
     if (value === 0) {
+      $("#spinner").val("4");
       fadeOut("#d4");
     } else if (value === 1) {
+      $("#spinner").val("6");
       fadeOut("#d6");
     } else if (value === 2) {
+      $("#spinner").val("8");
       fadeOut("#d8");
     } else if (value === 3) {
+      $("#spinner").val("10");
       fadeOut("#d10");
     } else if (value === 4) {
+      $("#spinner").val("12");
       fadeOut("#d12");
     } else if (value === 5) {
+      $("#spinner").val("20");
       fadeOut("#d20");
     } // else, doNothing();
   });

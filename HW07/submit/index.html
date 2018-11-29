@@ -17,6 +17,7 @@
   <link type="text/css" rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/themes/blitzer/jquery-ui.css" />
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
   <script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="Scripts/library_die.js"></script>
   <script src="Scripts/objects.js" defer></script>
 
 </head>
@@ -34,20 +35,27 @@
 					<option value="5">D20</option>
 				</select>
     </fieldset>
-
+    
+    <!--added 11/28 input type "spinner"  https://www.w3schools.com/html/tryit.asp?-->filename=tryhtml5_input_type_number
+    <form action="/action_page.php">
+      Quantity (between 1 and 5):
+      <input type="number" name="quantity" min="1" max="20">
+      <input type="submit" value="Send">
+    </form>
 
     <p>
-      <label for="spinner">Value of the Roll:</label>
-      <input id="spinner" name="value">
+      <label for="numberOfRolls">Spinner:</label>
+      <input type="spinner" id="spinner" name="value" />
     </p>
-
+    <label for="thisRoll">Value of the Roll:</label>
+    <input type="text" id="thisRoll" name="value" disabled />
+    <br />
     <label for="minRoll">Min Roll:</label>
-    <input type="text" id="minRoll" name="minRoll" disabled />
+    <input type="text" id="minRoll" name="minRoll" disabled/>
     <br />
     <label for="maxRoll">Max Roll:</label>
-    <input type="text" id="maxRoll" name="maxRoll" disabled />
+    <input type="text" id="maxRoll" name="maxRoll" disabled/>
     <br />
-
 
   </section>
   <section id="d4">
