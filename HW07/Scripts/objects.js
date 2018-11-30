@@ -34,7 +34,9 @@ function wait(time) {
 function displayResult(thisRoll) {
     // set value of spinner equal to thisRoll
     const thisRollId = $("#thisRoll");
-    var sum = thisRoll.valueOf() + thisRollId.val().valueOf();
+    //var sum = thisRoll.valueOf() + thisRollId.val().valueOf();//
+    var sum = parseInt(thisRoll.valueOf()) + parseInt(thisRollId.val().valueOf());
+
     thisRollId.val(sum.toString());
     alert ("Sum:=" + sum.toString());
     // updating minRoll and maxRoll
