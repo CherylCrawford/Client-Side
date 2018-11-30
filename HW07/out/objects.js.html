@@ -32,201 +32,163 @@
 // class: Client-Side Programming
 // assignment: HW07 objects
 
-/** 
- * fadeOut all previous buttons, fadeIn selected button
- * @example &lt;caption>Example: fadeOut everything but D10&lt;/caption>  
- * fadeOut("#d10");
- * @param {string} fadeIn The button id that will be displayed. 
+
+// adapted from https://stackoverflow.com/questions/19389200/javascript-sleep-delay-wait-function
+
+/**
+ * Function rollSpeed sets amount of time between rolls.
+ *  @param {Number} time Wait time in milliseconds.
  */
-function fadeOut(fadeIn) {
-  $("#d4").fadeOut("fast", function () {
-    $("#d6").fadeOut("fast", function () {
-      $("#d8").fadeOut("fast", function () {
-        $("#d10").fadeOut("fast", function () {
-          $("#d12").fadeOut("fast", function () {
-            $("#d20").fadeOut("fast", function () {
-              $(fadeIn).fadeIn(2000);
-            });
-          });
-        });
-      });
+async function rollSpeed(time) {
+    await wait(time);
+}
+
+/**
+ * Function wait counts the time.
+ * @param {Number} time Wait time in milliseconds.
+ * @returns {Promise&lt;executor>}  Wait function.
+ */
+function wait(time) {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve();
+        }, time);
     });
-  });
 }
 
-/** 
- * rollingDice sets the values to spinner, minRoll, maxRoll, and randomNumber
- * @param {Number} sides The number of sides on the dice. 
- * @returns {Number} randomNumber The number that is rolled on the dice. 
+/**
+ * DisplayResult sets the value of spinner and updates minRoll and/or maxRoll.
+ * @param {Number} thisRoll The number of the current roll.
  */
-function rollingDice(sides) {
-  var randomNumber = Math.floor(Math.random() * sides) + 1;
+function displayResult(thisRoll) {
+    // set value of spinner equal to thisRoll
+    const thisRollId = $("#thisRoll");
+    var ta = parseInt(thisRoll.valueOf());
+    var tb = parseInt(thisRollId.val().valueOf());
+    
+    // adapted from https://www.w3schools.com/jsref/jsref_isnan.asp
+    if (isNaN(ta)) {
+        ta = 0;
+    }
+    if (isNaN(tb)) {
+        tb = 0;
+    }
+    var sum = ta + tb;
 
-  // set value of spinner equal to random number 
-  $("#spinner").text(randomNumber.toString());
+    thisRollId.val(sum.toString());
+    alert("Sum:=" + sum.toString());
+    // updating minRoll and maxRoll
+    const minRollId = $("#minRoll"); // looking up minRoll element
+    const maxRollId = $("#maxRoll"); // looking up maxRoll element
+    var minRoll = minRollId.val().trim();
+    var maxRoll = maxRollId.val().trim();
 
-  var minRoll = $("#minRoll").val().trim();
-  var maxRoll = $("#maxRoll").val().trim();
-  if (minRoll == "") { // if min roll is blank then set min and max roll to random number
-    $("#minRoll").val(randomNumber.toString());
-    $("#maxRoll").val(randomNumber.toString());
-  } else if (randomNumber &lt; minRoll.parseInt()) { // if random number is &lt; min roll then set min roll to random number 
-    $("#minRoll").val(randomNumber.toString());
-  } else if (randomNumber > maxRoll.parseInt()) { // if random number is > max roll then set max roll to random number 
-    $("#maxRoll").val(randomNumber.toString());
-  }
-  return randomNumber;
+    if (minRoll === "") { // if min roll is blank then set min and max roll
+        // to thisRoll
+        minRollId.val(thisRoll.toString());
+        maxRollId.val(thisRoll.toString());
+    } else if (thisRoll &lt; minRoll.valueOf()) { // if thisRoll is &lt; min roll then set min roll to thisRoll
+        minRollId.val(thisRoll.toString());
+    } else if (thisRoll > maxRoll.valueOf()) { // if thisRoll is > max roll then set max roll to thisRoll
+        maxRollId.val(thisRoll.toString());
+    }
+
+    // add roll to the list
+    var str = "Roll:= " + thisRoll.toString();
+    $("#cardGameListBox").append("&lt;option value='Roll'> " + str + "&lt;/option>");
 }
 
+/**
+ * displayDice displays the dice that has been rolled
+ * @param {String} face This string is an SVG that describes the dice.
+ * @param {Number} thisRoll The number of the current roll.
+ */
+function displayDice(face, thisRoll) {
+    // looking for the output element to display the dice
+    let o = document.getElementById('output');
+    let p = o.innerHTML;
+
+    // placing thisRoll on the face of the SVG
+    p = p.concat("&lt;span> " + face.replace('REPLACEME', thisRoll.toString()) + " &lt;/span>");
+
+    // updating elements to be displayed
+    o.innerHTML = p;
+}
 
 $(function () {
-  var menu = $("#shape");
+    var menu = $("#shape");
+    menu.selectmenu();
 
-  $("#d4Submit").click(function (event) {
-    var sides = 4;
-    var randomNumber = rollingDice(sides);
+    // setting the default numberOfRolls
+    $("#numberOfRolls").val("1");
 
-    // display D4 with random number 
-    var face = '&lt;svg width="50" height="50">&lt;polygon points="0,3 25,46 50,3" style="stroke: black; fill: none" />&lt;text fill="black" x="20" y="26" font-family="Verdana" font-size="18">REPLACEME&lt;/text>&lt;/svg>';
+    // eventHandler for the diceSubmit button
+    $("#diceSubmit").on("click", function (event) {
+        var face;
+        var dice;
+        var value = $("#shape").val().valueOf();
+        alert("Value:= " + value.toString());
+        if (value == 0) {
+            dice = new Die(4);
+            face = '&lt;svg width="50" height="50">&lt;polygon points="0,3 25,46 50,3" style="stroke: black; fill: none" />&lt;text fill="black" x="20" y="26" font-family="Verdana" font-size="18">REPLACEME&lt;/text>&lt;/svg>';
+        } else if (value == 1) {
+            dice = new Die(6);
+            face = '&lt;svg width="50" height="50">&lt;polygon points="3,3 3,47 47,47 47,3" style="stroke: black; fill: none" />&lt;text fill="black" x="20" y="30" font-family="Verdana" font-size="18">REPLACEME&lt;/text>&lt;/svg>';
+        } else if (value == 2) {
+            dice = new Die(8);
+            face = '&lt;svg width="60" height="50">&lt;polygon points="17,0 60,25 17,50 17,0 0,25 17,50" style="stroke: black; fill: none" />&lt;text fill="black" x="25" y="30" font-family="Verdana" font-size="18">REPLACEME&lt;/text>&lt;/svg>';
+        } else if (value == 3) {
+            dice = new Die(10);
+            face = '&lt;svg width="60" height="50">&lt;polygon points="17,0 60,25 17,50 17,0 0,25 17,50" style="stroke: black; fill: none" />&lt;text fill="black" x="25" y="30" font-family="Verdana" font-size="18">REPLACEME&lt;/text>&lt;/svg>';
+        } else if (value == 4) {
+            dice = new Die(12);
+            face = '&lt;svg width="50" height="50">&lt;polygon points="25,0 1,17 10,45 40,45 49,17" style="stroke: black; fill: none" />&lt;text fill="black" x="13" y="30" font-family="Verdana" font-size="18">REPLACEME&lt;/text>&lt;/svg>';
+        } else if (value == 5) {
+            dice = new Die(20);
+            face = '&lt;svg width="50" height="50">&lt;polygon points="0,46 25,0 50,46" style="stroke: black; fill: none" />&lt;text fill="black" x="13" y="40" font-family="Verdana" font-size="18">REPLACEME&lt;/text>&lt;/svg>';
+        } // else, doNothing();
+        alert("Face:= " + face);
+        // clear values
+        $("#minRoll").val("");
+        $("#maxRoll").val("");
+        $("#thisRoll").val("0");
 
-    o = document.getElementById('output');
-    o.innerHTML = "";
-    p = o.innerHTML;
+        // clear contents of ListBox
+        $("#cardGameListBox").empty();
 
-    p = p.concat("&lt;span> " + face.replace('REPLACEME', randomNumber.toString()) + " &lt;/span>");
-    o.innerHTML = p;
+        // looking for the output element to display the dice
+        let o = document.getElementById('output');
 
-    // prevent default
-    event.preventDefault();
-  });
+        // clearing the contents of the output element
+        o.innerHTML = "";
 
-  $("#d6Submit").click(function (event) {
-    var sides = 6;
-    var randomNumber = rollingDice(sides);
+        // find the number of times to roll
+        var timesToRoll = $("#numberOfRolls").val().valueOf();
+        alert("Times to Roll:= " + timesToRoll.toString());
+        for (var i = 0; i &lt; timesToRoll; i++) {
+            alert("Roll Number:= " + i.toString());
+            // roll the dice
+            var randomNumber = dice.rollingDice();
+            alert("Random Number:= " + randomNumber.toString());
 
-    // display D6 with random number 
-    var face = '&lt;svg width="50" height="50">&lt;polygon points="3,3 3,47 47,47 47,3" style="stroke: black; fill: none" />&lt;text fill="black" x="20" y="30" font-family="Verdana" font-size="18">REPLACEME&lt;/text>&lt;/svg>';
+            // Update spinner min and max
+            displayResult(randomNumber);
 
-    o = document.getElementById('output');
-    o.innerHTML = "";
-    p = o.innerHTML;
+            // display the dice with thisRoll
+            displayDice(face, randomNumber);
 
-    p = p.concat("&lt;span> " + face.replace('REPLACEME', randomNumber.toString()) + " &lt;/span>");
-    o.innerHTML = p;
+            // wait
+            rollSpeed(500);
+        }
 
-    // prevent default
-    event.preventDefault();
-  });
+        // clean up memory
+        // adapted from https://stackoverflow.com/questions/21118952/javascript-create-and-destroy-class-instance-through-class-method/21119696
+        dice = null;
 
-  $("#d8Submit").click(function (event) {
-    var sides = 8;
-    var randomNumber = rollingDice(sides);
-
-    // display D8 with random number 
-    var face = '&lt;svg width="60" height="50">&lt;polygon points="17,0 60,25 17,50 17,0 0,25 17,50" style="stroke: black; fill: none" />&lt;text fill="black" x="25" y="30" font-family="Verdana" font-size="18">REPLACEME&lt;/text>&lt;/svg>';
-
-    o = document.getElementById('output');
-    o.innerHTML = "";
-    p = o.innerHTML;
-
-    p = p.concat("&lt;span> " + face.replace('REPLACEME', randomNumber.toString()) + " &lt;/span>");
-    o.innerHTML = p;
-
-    // prevent default
-    event.preventDefault();
-  });
-
-  $("#d10Submit").click(function (event) {
-    var sides = 10;
-    var randomNumber = rollingDice(sides);
-
-    // display D10 with random number 
-    var face = '&lt;svg width="50" height="50">&lt;polygon points="43,50 0,25 43,0 50,25" style="stroke: black; fill: none" />&lt;text fill="black" x="20" y="30" font-family="Verdana" font-size="18">REPLACEME&lt;/text>&lt;/svg>';
-
-    o = document.getElementById('output');
-    o.innerHTML = "";
-    p = o.innerHTML;
-
-    p = p.concat("&lt;span> " + face.replace('REPLACEME', randomNumber.toString()) + " &lt;/span>");
-    o.innerHTML = p;
-
-    // prevent default
-    event.preventDefault();
-  });
-
-  $("#d12Submit").click(function (event) {
-    var sides = 12;
-    var randomNumber = rollingDice(sides);
-
-    // display D12 with random number 
-    var face = '&lt;svg width="50" height="50">&lt;polygon points="25,0 1,17 10,45 40,45 49,17" style="stroke: black; fill: none" />&lt;text fill="black" x="13" y="30" font-family="Verdana" font-size="18">REPLACEME&lt;/text>&lt;/svg>';
-
-    o = document.getElementById('output');
-    o.innerHTML = "";
-    p = o.innerHTML;
-
-    p = p.concat("&lt;span> " + face.replace('REPLACEME', randomNumber.toString()) + " &lt;/span>");
-    o.innerHTML = p;
-
-    // prevent default
-    event.preventDefault();
-  });
-
-  $("#d20Submit").click(function (event) {
-    var sides = 20;
-    var randomNumber = rollingDice(sides);
-
-    // display D20 with random number 
-    var face = '&lt;svg width="50" height="50">&lt;polygon points="0,46 25,0 50,46" style="stroke: black; fill: none" />&lt;text fill="black" x="13" y="40" font-family="Verdana" font-size="18">REPLACEME&lt;/text>&lt;/svg>';
-
-    o = document.getElementById('output');
-    o.innerHTML = "";
-    p = o.innerHTML;
-
-    p = p.concat("&lt;span> " + face.replace('REPLACEME', randomNumber.toString()) + " &lt;/span>");
-    o.innerHTML = p;
-
-    // prevent default
-    event.preventDefault();
-  });
-
-  $("#d6").hide();
-  $("#d8").hide();
-  $("#d10").hide();
-  $("#d12").hide();
-  $("#d20").hide();
-  menu.selectmenu();
-  menu.on("selectmenuchange", function () {
-    var value = parseInt(this.value);
-    if (value === 0) {
-      fadeOut("#d4");
-    } else if (value === 1) {
-      fadeOut("#d6");
-    } else if (value === 2) {
-      fadeOut("#d8");
-    } else if (value === 3) {
-      fadeOut("#d10");
-    } else if (value === 4) {
-      fadeOut("#d12");
-    } else if (value === 5) {
-      fadeOut("#d20");
-    } // else, doNothing();
-  });
+        // prevent default
+        event.preventDefault();
+    });
 });
-
-//Prints dice roll to the page
-
-/*function printNumber(number) {
-  var placeholder = document.getElementById('placeholder');
-  placeholder.innerHTML = number;
-}
-
-var button = document.getElementById('button');
-
-button.onclick = function () {
-  var result = dice.roll();
-  printNumber(result);
-};*/
 </code></pre>
         </article>
     </section>
@@ -237,13 +199,13 @@ button.onclick = function () {
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#fadeOut">fadeOut</a></li><li><a href="global.html#rollingDice">rollingDice</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="new%2520Die.html">new Die</a></li></ul><h3>Global</h3><ul><li><a href="global.html#displayDice">displayDice</a></li><li><a href="global.html#displayResult">displayResult</a></li><li><a href="global.html#rollSpeed">rollSpeed</a></li><li><a href="global.html#wait">wait</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sun Nov 18 2018 22:44:31 GMT-0600 (Central Standard Time)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Thu Nov 29 2018 20:26:29 GMT-0600 (Central Standard Time)
 </footer>
 
 <script> prettyPrint(); </script>

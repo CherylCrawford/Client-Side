@@ -104,7 +104,7 @@
     
 
     
-    <h4 class="name" id="fadeOut"><span class="type-signature"></span>fadeOut<span class="signature">(fadeIn)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="displayDice"><span class="type-signature"></span>displayDice<span class="signature">(face, thisRoll)</span><span class="type-signature"></span></h4>
     
 
     
@@ -112,7 +112,7 @@
 
 
 <div class="description">
-    fadeOut all previous buttons, fadeIn selected button
+    displayDice displays the dice that has been rolled
 </div>
 
 
@@ -148,13 +148,13 @@
 
         <tr>
             
-                <td class="name"><code>fadeIn</code></td>
+                <td class="name"><code>face</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">string</span>
+<span class="param-type">String</span>
 
 
             
@@ -164,7 +164,30 @@
 
             
 
-            <td class="description last">The button id that will be displayed.</td>
+            <td class="description last">This string is an SVG that describes the dice.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>thisRoll</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The number of the current roll.</td>
         </tr>
 
     
@@ -205,7 +228,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="objects.js.html">objects.js</a>, <a href="objects.js.html#line13">line 13</a>
+        <a href="objects.js.html">objects.js</a>, <a href="objects.js.html#line78">line 78</a>
     </li></ul></dd>
     
 
@@ -232,13 +255,6 @@
 
 
 
-    <h5>Example</h5>
-    
-        <p class="code-caption">Example: fadeOut everything but D10</p>
-    
-    <pre class="prettyprint"><code>fadeOut("#d10");</code></pre>
-
-
 
         
             
@@ -246,7 +262,7 @@
     
 
     
-    <h4 class="name" id="rollingDice"><span class="type-signature"></span>rollingDice<span class="signature">(sides)</span><span class="type-signature"> &rarr; {Number}</span></h4>
+    <h4 class="name" id="displayResult"><span class="type-signature"></span>displayResult<span class="signature">(thisRoll)</span><span class="type-signature"></span></h4>
     
 
     
@@ -254,7 +270,7 @@
 
 
 <div class="description">
-    rollingDice sets the values to spinner, minRoll, maxRoll, and randomNumber
+    DisplayResult sets the value of spinner and updates minRoll and/or maxRoll.
 </div>
 
 
@@ -290,7 +306,7 @@
 
         <tr>
             
-                <td class="name"><code>sides</code></td>
+                <td class="name"><code>thisRoll</code></td>
             
 
             <td class="type">
@@ -306,7 +322,7 @@
 
             
 
-            <td class="description last">The number of sides on the dice.</td>
+            <td class="description last">The number of the current roll.</td>
         </tr>
 
     
@@ -347,7 +363,277 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="objects.js.html">objects.js</a>, <a href="objects.js.html#line34">line 34</a>
+        <a href="objects.js.html">objects.js</a>, <a href="objects.js.html#line35">line 35</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="rollSpeed"><span class="type-signature">(async) </span>rollSpeed<span class="signature">(time)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Function rollSpeed sets amount of time between rolls.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>time</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Wait time in milliseconds.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="objects.js.html">objects.js</a>, <a href="objects.js.html#line14">line 14</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="wait"><span class="type-signature"></span>wait<span class="signature">(time)</span><span class="type-signature"> &rarr; {Promise.&lt;executor>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Function wait counts the time.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>time</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Wait time in milliseconds.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="objects.js.html">objects.js</a>, <a href="objects.js.html#line23">line 23</a>
     </li></ul></dd>
     
 
@@ -374,7 +660,7 @@
 
         
 <div class="param-desc">
-    randomNumber The number that is rolled on the dice.
+    Wait function.
 </div>
 
 
@@ -385,7 +671,7 @@
     </dt>
     <dd>
         
-<span class="param-type">Number</span>
+<span class="param-type">Promise.&lt;executor></span>
 
 
     </dd>
@@ -413,13 +699,13 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#fadeOut">fadeOut</a></li><li><a href="global.html#rollingDice">rollingDice</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="new%2520Die.html">new Die</a></li></ul><h3>Global</h3><ul><li><a href="global.html#displayDice">displayDice</a></li><li><a href="global.html#displayResult">displayResult</a></li><li><a href="global.html#rollSpeed">rollSpeed</a></li><li><a href="global.html#wait">wait</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sun Nov 18 2018 22:44:31 GMT-0600 (Central Standard Time)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Thu Nov 29 2018 20:26:29 GMT-0600 (Central Standard Time)
 </footer>
 
 <script> prettyPrint(); </script>

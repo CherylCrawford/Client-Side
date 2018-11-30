@@ -6,8 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="57a67c5a-f650-4435-8edc-7f9c3b5c25e3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW07/CSS/standard.css" beforeDir="false" afterPath="$PROJECT_DIR$/HW07/CSS/standard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW07/HW07_SherrieTeague.zip" beforeDir="false" afterPath="$PROJECT_DIR$/HW07/HW07_SherrieTeague.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HW07/Scripts/objects.js" beforeDir="false" afterPath="$PROJECT_DIR$/HW07/Scripts/objects.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HW07/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/HW07/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW07/out/global.html" beforeDir="false" afterPath="$PROJECT_DIR$/HW07/out/global.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW07/out/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/HW07/out/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW07/out/objects.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/HW07/out/objects.js.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,34 +24,35 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5335868">
+    <splitter split-orientation="horizontal" split-proportion="0.5168287">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/HW07/Scripts/objects.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="260">
-                  <caret line="37" column="82" selection-start-line="37" selection-start-column="82" selection-end-line="37" selection-end-column="82" />
+                <state relative-caret-position="2660">
+                  <caret line="133" column="10" selection-start-line="133" selection-start-column="10" selection-end-line="133" selection-end-column="10" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
-                    <element signature="n#style#0;n#polygon#0;n#svg#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#polygon#0;n#svg#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#polygon#0;n#svg#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#polygon#0;n#svg#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#polygon#0;n#svg#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#polygon#0;n#svg#0;n#!!top" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/HW07/Scripts/library_die.js">
+            <entry file="file://$PROJECT_DIR$/HW07/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-30">
-                  <folding>
-                    <element signature="n#!!doc" expanded="true" />
-                  </folding>
+                <state relative-caret-position="893">
+                  <caret line="74" selection-start-line="74" selection-end-line="74" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/HW07/CSS/standard.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="320">
+                  <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
                 </state>
               </provider>
             </entry>
@@ -54,12 +60,12 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+        <leaf>
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/HW07/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="590">
-                  <caret line="70" column="7" lean-forward="true" selection-start-column="1" selection-end-line="70" selection-end-column="7" />
+                <state relative-caret-position="480">
+                  <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
                 </state>
               </provider>
             </entry>
@@ -97,8 +103,9 @@
         <option value="$PROJECT_DIR$/HW08/Scripts/main.js" />
         <option value="$PROJECT_DIR$/HW08/index.html" />
         <option value="$PROJECT_DIR$/HW02/CSS/standard.css" />
-        <option value="$PROJECT_DIR$/HW07/index.html" />
         <option value="$PROJECT_DIR$/HW07/Scripts/objects.js" />
+        <option value="$PROJECT_DIR$/HW07/index.html" />
+        <option value="$PROJECT_DIR$/HW07/CSS/standard.css" />
       </list>
     </option>
   </component>
@@ -148,6 +155,12 @@
               <item name="Client-Side" type="b2602c69:ProjectViewProjectNode" />
               <item name="Client-Side" type="462c0819:PsiDirectoryNode" />
               <item name="HW07" type="462c0819:PsiDirectoryNode" />
+              <item name="CSS" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Client-Side" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Client-Side" type="462c0819:PsiDirectoryNode" />
+              <item name="HW07" type="462c0819:PsiDirectoryNode" />
               <item name="Scripts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -182,7 +195,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="liveEdit" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2018.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RunDashboard">
@@ -197,7 +210,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index.html">
+  <component name="RunManager" selected="Node.js.objects.js">
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Client-Side/HW07/index.html">
       <method v="2" />
     </configuration>
@@ -206,8 +219,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="Node.js.objects.js" />
+        <item itemvalue="JavaScript Debug.index.html" />
       </list>
     </recent_temporary>
   </component>
@@ -226,7 +239,7 @@
       <workItem from="1543368685640" duration="5908000" />
       <workItem from="1543465607444" duration="94000" />
       <workItem from="1543465860563" duration="15152000" />
-      <workItem from="1543521256911" duration="6281000" />
+      <workItem from="1543521256911" duration="19863000" />
     </task>
     <task id="LOCAL-00001" summary="Created temperature.ts and edited index.html">
       <created>1536728278031</created>
@@ -267,19 +280,19 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37253000" />
+    <option name="totallyTimeSpent" value="50835000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.15272497" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15272497" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.0" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.32914925" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -295,13 +308,13 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15272497" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15272497" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.0" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.32914925" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -438,35 +451,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HW07/index.html">
+    <entry file="file://$PROJECT_DIR$/HW07/Scripts/objects.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="590">
-          <caret line="70" column="7" lean-forward="true" selection-start-column="1" selection-end-line="70" selection-end-column="7" />
+        <state relative-caret-position="2660">
+          <caret line="133" column="10" selection-start-line="133" selection-start-column="10" selection-end-line="133" selection-end-column="10" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HW07/Scripts/library_die.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-30">
+        <state relative-caret-position="120">
+          <caret line="6" column="11" lean-forward="true" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HW07/Scripts/objects.js">
+    <entry file="file://$PROJECT_DIR$/HW07/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="37" column="82" selection-start-line="37" selection-start-column="82" selection-end-line="37" selection-end-column="82" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="n#style#0;n#polygon#0;n#svg#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#polygon#0;n#svg#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#polygon#0;n#svg#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#polygon#0;n#svg#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#polygon#0;n#svg#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#polygon#0;n#svg#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="893">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW07/CSS/standard.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
         </state>
       </provider>
     </entry>

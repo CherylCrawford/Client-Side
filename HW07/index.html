@@ -1,5 +1,8 @@
 <!-- index.html
-
+ student: Sherrie Teague
+ date: 11/18/2018
+ class: Client-Side Programming
+ assignment: HW07 objects
 -->
 
 <!doctype html>
@@ -36,29 +39,35 @@
     </fieldset>
 
     <!-- input type "spinner"  https://www.w3schools.com/html/tryit.asp?-->
+    <div id="rolls">
     <label for="numberOfRolls">Number of Rolls:</label>
     <input type="number" id="numberOfRolls" name="quantity" min="1" max="20">
+    </div>
     <br/>
     <section id="dice">
       <input type="submit" id="diceSubmit" name="diceSubmit"
              value="Roll Dice" class="ui-button ui-widget ui-corner-all"/>
-      <div id="diceResult">
-        &nbsp;
-      </div>
+      <select id="cardGameListBox" name="cardNameListBox" size="6">
+      </select>
     </section>
-    <br/>
-    <select id="cardGameListBox" name="cardNameListBox" size="6">
-    </select>
+
+
     <br/>
 
+    <div id="valueRoll">
     <label for="thisRoll">Value of the Roll:</label>
     <input type="text" id="thisRoll" name="value" disabled/>
+    </div>
     <br/>
+    <div id="nRoll">
     <label for="minRoll">Min Roll:</label>
     <input type="text" id="minRoll" name="minRoll" disabled/>
+    </div>
     <br/>
+    <div id="xRoll">
     <label for="maxRoll">Max Roll:</label>
     <input type="text" id="maxRoll" name="maxRoll" disabled/>
+    </div>
     <br/>
   </form>
 </section>
