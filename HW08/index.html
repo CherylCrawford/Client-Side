@@ -22,6 +22,7 @@ assignment: HW08 Pulling It All Together
 
   <!-- The library files should be included in the index.html file in the
    proper order, so each library is included after any libraries it depends
+
    on. -->
   <script src="Scripts/library_settings.js" defer></script>
   <script src="Scripts/main.js" defer></script>
@@ -138,21 +139,7 @@ assignment: HW08 Pulling It All Together
   </div>
 
   <script>
-    function openTab(evt, tabName) {
-      var i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName("tabcontent");
-      // turning tabs off
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-      }
-      tablinks = document.getElementsByClassName("tablinks");
-      // turning on tab that is selected
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-      }
-      document.getElementById(tabName).style.display = "block";
-      evt.currentTarget.className += "active";
-    }
+
   </script>
 </body>
 

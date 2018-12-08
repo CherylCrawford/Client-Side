@@ -4,8 +4,9 @@
 // class: Client-Side Programming
 // assignment: HW08 Pulling It All Together
 
-/*Use an images array to store the images for the cards used
-by a game.*/
+/*
+/!*Use an images array to store the images for the cards used
+by a game.*!/
     var imgArray = [
     'images/card_1.png',
     'images/card_2.png',
@@ -33,10 +34,26 @@ by a game.*/
     'images/card_24.png'
     ];
 
-/*Use a cards array to store the src attributes of the images
+/!*Use a cards array to store the src attributes of the images
 for the cards that will be displayed on the board (two for
-    each image).*/
+    each image).*!/
 var cardsArray = [
 
 ];
+*/
 
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    // turning tabs off
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    // turning on tab that is selected
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += "active";
+}

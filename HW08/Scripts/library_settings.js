@@ -16,8 +16,11 @@ $(function() {
     var playerName = getCookie("playerName");
     if (playerName.length !== 0) {
         $("playerName").val(playerName);
+        $("#name").text(playerName);
+        alert("playerName:=" + playerName);
     } else {
         // we do not have a cookie.
+        alert("noPlayerNameCookie");
     }
 
     var numberOfCards = getCookie("numberOfCards");
@@ -36,18 +39,31 @@ $(function() {
 
     $("#saveSettingSubmit").click(function() {
         var value = $("#playerName").val();
+        $("#name").text(value);
+
         create("playerName", value);
         value = $("numberOfCards").val();
         create("numberOfCards", value);
+
         // display the correct number of cards.
         let o = document.getElementById('playGame');
+
         // clearing the contents of playGame
         o.innerHTML = "";
         let p = o.innerHTML;
+
+        //
         var i;
         for (i = 0; i < numberOfCards; i++) {
-            p = p.concat("<span>" + face.replace('REPLACEME', thisRoll) + "</span>");
+
+
+
+
+
+
+
         }
+
         // updating elements to be displayed
         o.innerHTML = p;
     });
