@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Template Page</title>
+		<meta name="description" content="Template Page">
+		<meta name="author" content="studentName">
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript">
+
+            $(function() {
+
+                var color = getCookie("color");
+                if (color.length !== 0) {
+                    $("body").css("background-color", color);
+                } else {
+                    // we do not have a cookie.
+                    $("body").css("background-color", "white");
+                }
+
+               $("#save").click(function() {
+                    var value = $("input[name=color]:checked").val();
+                    $("body").css("background-color", value);
+                    create("color", value, 1);
+               });
+
+                $("#clear").click(function() {
+                   deleteCookie("color");
+                   $("body").css("background-color", "white");
+                });
+
+            });
+
+            function deleteCookie(name) {
+                document.cookie = name + "=''; max-age=0; path=/";
+            }
+
+            function getCookie(name) {
+                // this returns a string of ALL the cookies for this site!
+                // in the form of name=value;....
+                var cookies = document.cookie;
+
+                var firstIndex = cookies.indexOf(name + "=");
+
+                if (firstIndex < 0) {
+                    return ""; // the name does not exists in cookies.
+                } else {
+                    // move the index so the name of the cookie and the
+                    // = sign are not included. firstIndex is now the first letter
+                    // of the value.
+                    firstIndex = firstIndex + (name.length + 1);
+
+                    // we need to find the next semi-colon (;)
+                    var endIndex = cookies.indexOf(";", firstIndex);
+                    if (endIndex < 0) {
+                        endIndex = cookies.length;
+                    } // else we have a valid index doNothing();
+
+                    var value = cookies.substring(firstIndex, endIndex);
+
+                    return decodeURIComponent(value);
+                }
+            }
+
+            function create(name, value, days) {
+                var cookie = name + "=" + encodeURIComponent(value);
+
+                if (days !== undefined) {
+                    // if we actually have a value for days.
+                    // the lifetime of the cookie is seconds - so we
+                    // do some math to calculate the number of seconds in the days.
+                    cookie += "; max-age=" + days * 24 * 60 * 60;
+                } // else we have a session cookie (ends when the browser closes)
+                // every cookie has a path, the path / means the cookie is available
+                // to all pages within the url (example www.nwacc.edu/)
+                cookie += "; path=/";
+                document.cookie = cookie;
+            }
+
+        </script>
+    </head>
+	<body>
+        <section>
+            <form id="colorForm" name="colorForm" action="#">
+                <input type="radio" id="red" name="color" value="red" checked />
+                <label for="red">Red</label>
+                <br/>
+                <input type="radio" id="blue" name="color" value="blue" />
+                <label for="blue">Blue</label>
+                <br/>
+                <input type="radio" id="green" name="color" value="green" />
+                <label for="green">Green</label>
+                <br/>
+                <input type="button" value="Save" id="save" name="save" />
+                <br />
+                <input type="button" value="Clear" id="clear" name="clear" />
+            </form>
+        </section>
+	</body>
+</html>

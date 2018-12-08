@@ -4,203 +4,155 @@
 // class: Client-Side Programming
 // assignment: HW07 objects
 
-/*
- * displayResult sets the value of spinner and updates minRoll and/or maxRoll
- * @param {Number} thisRoll The number of the current roll. 
- */
-function displayResult(thisRoll) {
-  // set value of spinner equal to thisRoll
-  $("#thisRoll").val(thisRoll.toString());
 
-  var minRollId = $("#minRoll"); // looking up minRoll element 
-  var maxRollId = $("#maxRoll"); // looking up maxRoll element
-  var minRoll = minRollId.val().trim();
-  var maxRoll = maxRollId.val().trim();
-  if (minRoll == "") { // if min roll is blank then set min and max roll to thisRoll
-    minRollId.val(thisRoll.toString());
-    maxRollId.val(thisRoll.toString());
-  } else if (thisRoll < minRoll.valueOf()) { // if thisRoll is < min roll then set min roll to thisRoll
-    minRollId.val(thisRoll.toString());
-  } else if (thisRoll > maxRoll.valueOf()) { // if thisRoll is > max roll then set max roll to thisRoll
-    maxRollId.val(thisRoll.toString());
-  }
+// adapted from https://stackoverflow.com/questions/19389200/javascript-sleep-delay-wait-function
+
+/**
+ * Function rollSpeed sets amount of time between rolls.
+ *  @param {Number} time Wait time in milliseconds.
+ */
+async function rollSpeed(time) {
+  await wait(time);
 }
 
-/*
+/**
+ * Function wait counts the time.
+ * @param {Number} time Wait time in milliseconds.
+ * @returns {Promise<executor>}  Wait function.
+ */
+function wait(time) {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve();
+    }, time);
+  });
+}
+/**
+ * DisplayResult sets the value of spinner and updates minRoll and/or maxRoll.
+ * @param {Number} thisRoll The number of the current roll.
+ */
+var sum = 0;
+
+function displayResult(thisRoll) {
+
+  // set value of spinner equal to thisRoll
+  const thisRollId = $("#thisRoll");
+  sum += parseInt(thisRoll.valueOf()); //+ thisRollId.val().valueOf();
+  console.log("this roll: " + thisRoll.valueOf());
+  console.log(thisRollId.val().valueOf());
+  thisRollId.val(sum);
+  alert("Sum:=" + sum);
+
+  // updating minRoll and maxRoll
+  const minRollId = $("#minRoll"); // looking up minRoll element
+  const maxRollId = $("#maxRoll"); // looking up maxRoll element
+  var minRoll = minRollId.val().trim();
+  var maxRoll = maxRollId.val().trim();
+
+  if (minRoll === "") { // if min roll is blank then set min and max roll
+    // to thisRoll
+    minRollId.val(thisRoll);
+    maxRollId.val(thisRoll);
+  } else if (thisRoll < minRoll.valueOf()) { // if thisRoll is < min roll then set min roll to thisRoll
+    minRollId.val(thisRoll);
+  } else if (thisRoll > maxRoll.valueOf()) { // if thisRoll is > max roll then set max roll to thisRoll
+    maxRollId.val(thisRoll);
+  }
+
+  // add roll to the list
+  var str = "Roll:= " + thisRoll;
+  $("#cardGameListBox").append("<option value='Roll'> " + str + "</option>");
+}
+
+/**
  * displayDice displays the dice that has been rolled
- * @param {String} face This string is an SVG that describes the dice. 
- * @param {Number} thisRoll The number of the current roll. 
+ * @param {String} face This string is an SVG that describes the dice.
+ * @param {Number} thisRoll The number of the current roll.
  */
 function displayDice(face, thisRoll) {
   // looking for the output element to display the dice
   let o = document.getElementById('output');
-
-  // clearing the contents of the output element 
-  o.innerHTML = "";
   let p = o.innerHTML;
 
   // placing thisRoll on the face of the SVG
-  p = p.concat("<span> " + face.replace('REPLACEME', thisRoll.toString()) + " </span>");
+  p = p.concat("<span> " + face.replace('REPLACEME', thisRoll) + " </span>");
 
   // updating elements to be displayed
   o.innerHTML = p;
 }
 
-/** 
- * fadeOut all previous buttons, fadeIn selected button
- * @example <caption>Example: fadeOut everything but D10</caption>  
- * fadeOut("#d10");
- * @param {string} fadeIn The button id that will be displayed. 
- */
-function fadeOut(fadeIn) {
-  $("#d4").fadeOut("fast", function () {
-    $("#d6").fadeOut("fast", function () {
-      $("#d8").fadeOut("fast", function () {
-        $("#d10").fadeOut("fast", function () {
-          $("#d12").fadeOut("fast", function () {
-            $("#d20").fadeOut("fast", function () {
-              $(fadeIn).fadeIn(2000);
-            });
-          });
-        });
-      });
-    });
-  });
-}
-
-
 $(function () {
   var menu = $("#shape");
-  var d4 = new Die(4);
-  var d6 = new Die(6);
-  var d8 = new Die(8);
-  var d10 = new Die(10);
-  var d12 = new Die(12);
-  var d20 = new Die(20);
-
-  $("#d4Submit").click(function (event) {
-    var randomNumber = d4.rollingDice();
-
-    // Update spinner min and max
-    displayResult(randomNumber);
-
-    // display D4 with random number 
-    var face = '<svg width="50" height="50"><polygon points="0,3 25,46 50,3" style="stroke: black; fill: none" /><text fill="black" x="20" y="26" font-family="Verdana" font-size="18">REPLACEME</text></svg>';
-
-    // display the dice with thisRoll 
-    displayDice(face, randomNumber);
-
-    // prevent default
-    event.preventDefault();
-  });
-
-  $("#d6Submit").click(function (event) {
-    var randomNumber = d6.rollingDice();
-
-    // Update spinner min and max
-    displayResult(randomNumber);
-
-    // display D6 with random number 
-    var face = '<svg width="50" height="50"><polygon points="3,3 3,47 47,47 47,3" style="stroke: black; fill: none" /><text fill="black" x="20" y="30" font-family="Verdana" font-size="18">REPLACEME</text></svg>';
-
-    // display the dice with thisRoll 
-    displayDice(face, randomNumber);
-
-    // prevent default
-    event.preventDefault();
-  });
-
-  $("#d8Submit").click(function (event) {
-    var randomNumber = d8.rollingDice();
-
-    // Update spinner min and max
-    displayResult(randomNumber);
-
-    // display D8 with random number 
-    var face = '<svg width="60" height="50"><polygon points="17,0 60,25 17,50 17,0 0,25 17,50" style="stroke: black; fill: none" /><text fill="black" x="25" y="30" font-family="Verdana" font-size="18">REPLACEME</text></svg>';
-
-    // display the dice with thisRoll 
-    displayDice(face, randomNumber);
-
-    // prevent default
-    event.preventDefault();
-  });
-
-  $("#d10Submit").click(function (event) {
-    var randomNumber = d10.rollingDice();
-
-    // Update spinner min and max
-    displayResult(randomNumber);
-
-    // display D10 with random number 
-    var face = '<svg width="50" height="50"><polygon points="43,50 0,25 43,0 50,25" style="stroke: black; fill: none" /><text fill="black" x="20" y="30" font-family="Verdana" font-size="18">REPLACEME</text></svg>';
-
-    // display the dice with thisRoll 
-    displayDice(face, randomNumber);
-
-    // prevent default
-    event.preventDefault();
-  });
-
-  $("#d12Submit").click(function (event) {
-    var randomNumber = d12.rollingDice();
-
-    // Update spinner min and max
-    displayResult(randomNumber);
-
-    // display D12 with random number 
-    var face = '<svg width="50" height="50"><polygon points="25,0 1,17 10,45 40,45 49,17" style="stroke: black; fill: none" /><text fill="black" x="13" y="30" font-family="Verdana" font-size="18">REPLACEME</text></svg>';
-
-    // display the dice with thisRoll 
-    displayDice(face, randomNumber);
-
-    // prevent default
-    event.preventDefault();
-  });
-
-  $("#d20Submit").click(function (event) {
-    var randomNumber = d20.rollingDice();
-
-    // Update spinner min and max
-    displayResult(randomNumber);
-
-    // display D20 with random number 
-    var face = '<svg width="50" height="50"><polygon points="0,46 25,0 50,46" style="stroke: black; fill: none" /><text fill="black" x="13" y="40" font-family="Verdana" font-size="18">REPLACEME</text></svg>';
-
-    // display the dice with thisRoll 
-    displayDice(face, randomNumber);
-
-    // prevent default
-    event.preventDefault();
-  });
-
-  $("#d6").hide();
-  $("#d8").hide();
-  $("#d10").hide();
-  $("#d12").hide();
-  $("#d20").hide();
-  $("#spinner").val("4");
   menu.selectmenu();
-  menu.on("selectmenuchange", function () {
-    var value = parseInt(this.value);
-    if (value === 0) {
-      $("#spinner").val("4");
-      fadeOut("#d4");
-    } else if (value === 1) {
-      $("#spinner").val("6");
-      fadeOut("#d6");
-    } else if (value === 2) {
-      $("#spinner").val("8");
-      fadeOut("#d8");
-    } else if (value === 3) {
-      $("#spinner").val("10");
-      fadeOut("#d10");
-    } else if (value === 4) {
-      $("#spinner").val("12");
-      fadeOut("#d12");
-    } else if (value === 5) {
-      $("#spinner").val("20");
-      fadeOut("#d20");
+
+  // setting the default numberOfRolls
+  $("#numberOfRolls").val("1");
+
+  // eventHandler for the diceSubmit button
+  $("#diceSubmit").on("click", function (event) {
+    sum = 0;
+    var face;
+    var dice;
+    var value = $("#shape").val().valueOf();
+    //alert ("Value:= " + value);
+    if (value == 0) {
+      dice = new Die(4);
+      face = '<svg width="50" height="50"><polygon points="0,3 25,46 50,3" style="stroke: black; fill: none" /><text fill="black" x="20" y="26" font-family="Verdana" font-size="18">REPLACEME</text></svg>';
+    } else if (value == 1) {
+      dice = new Die(6);
+      face = '<svg width="50" height="50"><polygon points="3,3 3,47 47,47 47,3" style="stroke: black; fill: none" /><text fill="black" x="20" y="30" font-family="Verdana" font-size="18">REPLACEME</text></svg>';
+    } else if (value == 2) {
+      dice = new Die(8);
+      face = '<svg width="60" height="50"><polygon points="17,0 60,25 17,50 17,0 0,25 17,50" style="stroke: black; fill: none" /><text fill="black" x="25" y="30" font-family="Verdana" font-size="18">REPLACEME</text></svg>';
+    } else if (value == 3) {
+      dice = new Die(10);
+      face = '<svg width="60" height="50"><polygon points="17,0 60,25 17,50 17,0 0,25 17,50" style="stroke: black; fill: none" /><text fill="black" x="25" y="30" font-family="Verdana" font-size="18">REPLACEME</text></svg>';
+    } else if (value == 4) {
+      dice = new Die(12);
+      face = '<svg width="50" height="50"><polygon points="25,0 1,17 10,45 40,45 49,17" style="stroke: black; fill: none" /><text fill="black" x="13" y="30" font-family="Verdana" font-size="18">REPLACEME</text></svg>';
+    } else if (value == 5) {
+      dice = new Die(20);
+      face = '<svg width="50" height="50"><polygon points="0,46 25,0 50,46" style="stroke: black; fill: none" /><text fill="black" x="13" y="40" font-family="Verdana" font-size="18">REPLACEME</text></svg>';
     } // else, doNothing();
+    //alert ("Face:= " + face);
+    // clear values
+    $("#minRoll").val("");
+    $("#maxRoll").val("");
+    $("#thisRoll").val("");
+
+    // clear contents of ListBox
+    $("#cardGameListBox").empty();
+
+    // looking for the output element to display the dice
+    let o = document.getElementById('output');
+
+    // clearing the contents of the output element
+    o.innerHTML = "";
+
+    // find the number of times to roll
+    var timesToRoll = $("#numberOfRolls").val().valueOf();
+    //alert ("Times to Roll:= " + timesToRoll);
+    for (var i = 0; i < timesToRoll; i++) {
+      alert("Roll Number:= " + i);
+      // roll the dice
+      var randomNumber = parseInt(dice.rollingDice());
+      alert("Random Number:= " + randomNumber);
+
+      // Update spinner min and max
+      displayResult(randomNumber);
+
+      // display the dice with thisRoll
+      displayDice(face, randomNumber);
+
+      // wait
+      rollSpeed(500);
+    }
+
+    // clean up memory
+    // adapted from https://stackoverflow.com/questions/21118952/javascript-create-and-destroy-class-instance-through-class-method/21119696
+    dice = null;
+
+    // prevent default
+    event.preventDefault();
   });
 });

@@ -1,6 +1,6 @@
 <!-- index.html
  student: Sherrie Teague
- date: 11/18/2018 
+ date: 11/18/2018
  class: Client-Side Programming
  assignment: HW07 objects
 -->
@@ -19,98 +19,57 @@
   <script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/jquery-ui.min.js"></script>
   <script src="Scripts/library_die.js"></script>
   <script src="Scripts/objects.js" defer></script>
-
 </head>
 
 <body>
   <section>
-    <fieldset>
-      <legend>Select Dice</legend>
-      <select name="shape" id="shape">
-					<option value="0" selected="selected">D4</option>
-					<option value="1">D6</option>
-					<option value="2">D8</option>
-					<option value="3">D10</option>
-					<option value="4">D12</option>
-					<option value="5">D20</option>
-				</select>
-    </fieldset>
-    
-    <!--added 11/28 input type "spinner"  https://www.w3schools.com/html/tryit.asp?-->
-    <form action="/action_page.php">
-      Quantity (between 1 and 5):
-      <input type="number" name="quantity" min="1" max="20">
-      <input type="submit" value="Send">
-    </form>
+    <form id="diceForm" name="diceForm" action="#">
+      <fieldset>
+        <legend>Select Dice</legend>
+        <select name="shape" id="shape">
+        <option value="0" selected="selected">D4</option>
+        <option value="1">D6</option>
+        <option value="2">D8</option>
+        <option value="3">D10</option>
+        <option value="4">D12</option>
+        <option value="5">D20</option>
+      </select>
+      </fieldset>
 
-    <p>
-      <label for="numberOfRolls">Spinner:</label>
-      <input type="spinner" id="spinner" name="value" />
-    </p>
-    <label for="thisRoll">Value of the Roll:</label>
-    <input type="text" id="thisRoll" name="value" disabled />
-    <br />
-    <label for="minRoll">Min Roll:</label>
-    <input type="text" id="minRoll" name="minRoll" disabled/>
-    <br />
-    <label for="maxRoll">Max Roll:</label>
-    <input type="text" id="maxRoll" name="maxRoll" disabled/>
-    <br />
-
-  </section>
-  <section id="d4">
-    <form id="d4Form" name="d4Form" action="#">
-      <input type="submit" id="d4Submit" name="d4Submit" value="Roll D4 Dice" class="ui-button ui-widget ui-corner-all" />
-      <div id="d4Result">
-        &nbsp;
+      <!-- input type "spinner"  https://www.w3schools.com/html/tryit.asp?-->
+      <div id="rolls">
+        <label for="numberOfRolls">Number of Rolls:</label>
+        <input type="number" id="numberOfRolls" name="quantity" min="1" max="20">
       </div>
+      <br/>
+      <section id="dice">
+        <input type="submit" id="diceSubmit" name="diceSubmit" value="Roll Dice" class="ui-button ui-widget ui-corner-all" />
+        <select id="cardGameListBox" name="cardNameListBox" size="6">
+      </select>
+      </section>
+
+
+      <br/>
+
+      <div id="valueRoll">
+        <label for="thisRoll">Value of the Roll:</label>
+        <input type="text" id="thisRoll" name="value" disabled/>
+      </div>
+      <br/>
+      <div id="nRoll">
+        <label for="minRoll">Min Roll:</label>
+        <input type="text" id="minRoll" name="minRoll" disabled/>
+      </div>
+      <br/>
+      <div id="xRoll">
+        <label for="maxRoll">Max Roll:</label>
+        <input type="text" id="maxRoll" name="maxRoll" disabled/>
+      </div>
+      <br/>
     </form>
   </section>
 
-  <section id="d6">
-    <form id="d6Form" name="d6Form" action="#">
-      <input type="submit" id="d6Submit" name="d6Submit" value="Roll D6 Dice" class="ui-button ui-widget ui-corner-all" />
-      <div id="d6Result">
-        &nbsp;
-      </div>
-    </form>
-  </section>
 
-  <section id="d8">
-    <form id="d8Form" name="d8Form" action="#">
-      <input type="submit" id="d8Submit" name="d8Submit" value="Roll D8 Dice" class="ui-button ui-widget ui-corner-all" />
-      <div id="d8Result">
-        &nbsp;
-      </div>
-    </form>
-  </section>
-
-  <section id="d10">
-    <form id="d10Form" name="d10Form" action="#">
-      <input type="submit" id="d10Submit" name="d10Submit" value="Roll D10 Dice" class="ui-button ui-widget ui-corner-all" />
-      <div id="d10Result">
-        &nbsp;
-      </div>
-    </form>
-  </section>
-
-  <section id="d12">
-    <form id="d12Form" name="d12Form" action="#">
-      <input type="submit" id="d12Submit" name="d12Submit" value="Roll D12 Dice" class="ui-button ui-widget ui-corner-all" />
-      <div id="d12Result">
-        &nbsp;
-      </div>
-    </form>
-  </section>
-
-  <section id="d20">
-    <form id="d20Form" name="d20Form" action="#">
-      <input type="submit" id="d20Submit" name="d20Submit" value="Roll D20 Dice" class="ui-button ui-widget ui-corner-all" />
-      <div id="d20Result">
-        &nbsp;
-      </div>
-    </form>
-  </section>
   <div id="output"></div>
 
 </body>

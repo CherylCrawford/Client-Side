@@ -1,0 +1,91 @@
+
+
+
+/*$(#element name").val(playername").. (sets value)
+    then load the value and stick into correct element.
+    When click ... save settings button. Go through all cards and
+    start with #1 and go all the way through to 48.
+    Then if 24 cards will be active - the remaining must be inactive..
+    This all goes in block code below.
+    Next - when you do the refresh of screen and it reads the cookies
+     for the first time then it has to set all of the settings.. the name
+    the number of cards, (determine which are turned on/off. this might be a
+    function call but also a function call for reading the cookies)
+    The function for flipping cards or setting up the cards.. call it what?
+    (Come up with name for function) Add comments of stuff that need to be
+    done */
+	
+	/* codepen memory card game
+https://codepen.io/LauraEnria/pen/yjgPvR
+ */
+
+/* another codepen game .. live demo
+https://codepen.io/jamesbarnett/pen/kiGsl
+ */
+
+/* another codepen game
+https://codepen.io/collosic/pen/KsfwD
+ */
+
+/* another codepen
+https://codepen.io/MagdiMoh/pen/ELPbJL
+ */
+
+/* site showing card card with active/inactive cards and shuffle
+function etc.
+https://stackoverflow.com/questions/51748189/card-memory-matching-game-losing-click-handler-after-classes-added-and-removed
+*/
+
+/* another memory card came showing code that I think I need
+https://stackoverflow.com/questions/50599644/clicking-card-in-memory-game-doesnt-flip-it-over
+ */
+
+/* good github memory game
+https://github.com/sandraisrael/Memory-Game-fend/blob/master/js/app.js
+https://github.com/sandraisrael/Memory-Game-fend
+ */
+
+/* add active class to current element
+https://www.w3schools.com/howto/howto_js_active_element.asp
+ */
+
+/* another memory card game with complete JS code
+https://scotch.io/tutorials/how-to-build-a-memory-matching-game-in-javascript
+ */
+
+/*  memory game on github
+https://github.com/susanschen/Memory-Game
+ */
+
+/* stackoverflow card memory game
+https://codereview.stackexchange.com/questions/172417/simple-memory-game-in-javascript
+ */
+
+/* card memory game and tutuorial
+http://clockworkchilli.com/tutorials/javascript_memory_game.html
+ */
+
+/* nice memory card game .. live demo
+https://bytutorial.com/blogs/html5/how-to-create-a-simple-memory-game-using-html5-css3-and-javascript
+ */
+
+/* fade in/out with speed parameter
+https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_eff_fadeout_fadein_speed
+... live preview here https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_eff_fadeout_fadein_speed
+ */
+
+/* stackoverflow -  new game button to restart game
+https://stackoverflow.com/questions/30204473/adding-a-reset-new-game-button-to-code
+ */
+
+/* 2 images fade in/out
+https://stackoverflow.com/questions/32163388/add-animation-of-my-2-images-using-fade-in-and-or-fade-out
+ */
+
+/* 2 images fade in/out
+https://stackoverflow.com/questions/25465825/how-to-initiate-image-fade-out-and-fade-in-with-jquery-function
+ */
+
+/* fade in/out using opacity
+https://leewc.com/articles/javascript-fade-in-out-callback/
+ */
