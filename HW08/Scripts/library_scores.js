@@ -4,17 +4,93 @@
 // class: Client-Side Programming
 // assignment: HW08 Pulling It All Together
 
-// The library_scores.js file should create a scores object that keeps track
-// of the score for each game as well as each player’s high score.
-// This object should contain the two integer variables that keep track of
-// the number of turns and the number of turns that result in matches.
-// It should also contain the functions that save the scores to and retrieve
-// the scores from local storage, compare scores, and display a
-// player’s high score.
 
-//You’ll also need to add public methods that increment the integer
-// variables, check if all the cards have been removed from the board,
-// and calculate the percentage of correct selections. These new methods
+/**
+ * Class Scores Object that keeps track of the score for each game.
+ */
+class Scores {
+    /**
+     * numberOfTurns Keeps track of the number of turns.
+     * @type {number}
+     */
+    numberOfTurns = 0;
+
+
+    /**
+     * numberOfMatches Saves number of turns that result in matches.
+     * @type {number}
+     */
+    numberOfMatches = 0;
+
+
+    /**
+     * method saveScores Saves the scores from local storage.
+     */
+    saveScores() {
+
+
+    };
+
+
+    /**
+     * method retrieveScores Retrieves scores from local storage.
+     */
+    retrieveScores() {
+
+
+    };
+
+    /**
+     * method compareScores Compares scores from local storage.
+     */
+    compareScores() {
+
+
+    };
+
+
+    // Displays player's high score.
+    /**
+     * method displayHighScore Displays player's high score.
+     */
+    displayHighScore() {
+
+
+    };
+
+
+}
+
+
+// These new methods
 // should replace code that previously worked directly with the
 // integer variables.
 
+
+// Methods that increments the integer variables/
+/**
+ * function incInt Increments the integer variables.
+ * @param {Number} theVar The variable that is being incremented.
+ */
+function incInt(theVar) {
+    theVar++;
+}
+
+// Checks if all the cards have been removed from the board.
+/**
+ * function isBoardEmpty Checks if all the cards have been removed from the
+ * board.
+ */
+function isBoardEmpty() {
+
+
+}
+
+// Calculates the percentage of correct selections.
+/**
+ * function percentCorrect Calculates the percentage of correct selections.
+ */
+function percentCorrect() {
+
+
+}

@@ -6,12 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="57a67c5a-f650-4435-8edc-7f9c3b5c25e3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW08/CSS/standard.css" beforeDir="false" afterPath="$PROJECT_DIR$/HW08/CSS/standard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW08/Scripts/library_card.js" beforeDir="false" afterPath="$PROJECT_DIR$/HW08/Scripts/library_card.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW08/Scripts/library_cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/HW08/Scripts/library_cards.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW08/Scripts/library_settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/HW08/Scripts/library_settings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW08/Scripts/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/HW08/Scripts/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW08/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/HW08/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW08/Scripts/library_scores.js" beforeDir="false" afterPath="$PROJECT_DIR$/HW08/Scripts/library_scores.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,7 +18,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.558952">
+    <splitter split-orientation="horizontal" split-proportion="0.73071325">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -47,7 +42,7 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/HW08/Scripts/library_cards.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="2800">
@@ -59,10 +54,19 @@
               </provider>
             </entry>
           </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/HW08/Scripts/library_scores.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="210">
+                  <caret line="75" column="13" selection-start-line="75" selection-start-column="13" selection-end-line="75" selection-end-column="13" />
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/HW08/Scripts/library_settings.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="200">
+                <state relative-caret-position="820">
                   <caret line="75" column="5" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
                 </state>
               </provider>
@@ -75,7 +79,7 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/HW08/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1256">
+                <state relative-caret-position="2516">
                   <caret line="130" column="70" lean-forward="true" selection-start-line="130" selection-start-column="70" selection-end-line="130" selection-end-column="70" />
                 </state>
               </provider>
@@ -114,7 +118,6 @@
         <option value="$PROJECT_DIR$/HW02/Scripts/temperature.tx.ts" />
         <option value="$PROJECT_DIR$/HW02/Scripts/temperature.ts" />
         <option value="$PROJECT_DIR$/HW02/index.html" />
-        <option value="$PROJECT_DIR$/HW08/Scripts/library_scores.js" />
         <option value="$PROJECT_DIR$/HW08/CSS/standard.styl" />
         <option value="$PROJECT_DIR$/HW02/CSS/standard.css" />
         <option value="$PROJECT_DIR$/HW07/Scripts/objects.js" />
@@ -129,6 +132,7 @@
         <option value="$PROJECT_DIR$/HW08/Scripts/main.js" />
         <option value="$PROJECT_DIR$/HW08/Scripts/library_settings.js" />
         <option value="$PROJECT_DIR$/HW08/Scripts/library_cards.js" />
+        <option value="$PROJECT_DIR$/HW08/Scripts/library_scores.js" />
       </list>
     </option>
   </component>
@@ -244,7 +248,7 @@
       <workItem from="1544058284946" duration="8419000" />
       <workItem from="1544077206371" duration="8355000" />
       <workItem from="1544128383410" duration="4546000" />
-      <workItem from="1544286277112" duration="32793000" />
+      <workItem from="1544286277112" duration="36583000" />
     </task>
     <task id="LOCAL-00001" summary="Created temperature.ts and edited index.html">
       <created>1536728278031</created>
@@ -285,7 +289,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131582000" />
+    <option name="totallyTimeSpent" value="135372000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -430,16 +434,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HW08/Scripts/library_scores.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HW06/index.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -512,7 +506,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HW08/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1256">
+        <state relative-caret-position="2516">
           <caret line="130" column="70" lean-forward="true" selection-start-line="130" selection-start-column="70" selection-end-line="130" selection-end-column="70" />
         </state>
       </provider>
@@ -524,13 +518,6 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HW08/Scripts/library_settings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="75" column="5" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -548,6 +535,20 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW08/Scripts/library_settings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="820">
+          <caret line="75" column="5" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW08/Scripts/library_scores.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="75" column="13" selection-start-line="75" selection-start-column="13" selection-end-line="75" selection-end-column="13" />
         </state>
       </provider>
     </entry>
