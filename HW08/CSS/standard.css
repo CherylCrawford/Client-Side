@@ -11,20 +11,41 @@ assignment: HW08 Pulling It All Together
     grid-template-columns: auto auto auto auto auto auto auto auto;
 }*/
 
+body {
+    margin-left: 160px;
+    width:900px;
+}
+
+/* Style Div Game */
+.game {
+    border-style: solid;
+    border-width: thin;
+    border-color: grey;
+    margin-left:194px;
+    margin-top:10px;
+    padding: 5px;
+    width:640px;
+}
+
+
 /* Style the tab */
 .tab {
     overflow: hidden;
     border: 1px solid #ccc;
     background-color: #f1f1f1;
+    margin-top: 6px;
+    margin-left: 0px;
+    width: 638px;
 }
+
 
 /* Style the buttons inside the tab */
 .tab button {
     background-color: inherit;
-    float: left;
+    /*float: left;*/
     border: none;
     outline: none;
-    cursor: pointer;
+    /*cursor: pointer;*/
     padding: 14px 16px;
     transition: 0.3s;
     font-size: 17px;
@@ -52,7 +73,15 @@ assignment: HW08 Pulling It All Together
 /* Create six equal columns that float next to each other */
 .memory-game {
     box-sizing: border-box;
+    float: left;
+    padding: 10px;
 }
+
+/*doing it this way creates 6 rows with 8 columns*/
+/*.memory-game {
+    float: left;
+    padding: 10px;
+}*/
 
 /* doing it this way creates 8 rows with 6 columns*/
 /*.memory-card {
@@ -61,20 +90,17 @@ assignment: HW08 Pulling It All Together
     padding: 0;
 }*/
 
-/* doing it this way creates 6 rows with 8 columns*/
-.memory-game {
-    float: left;
-    padding: 10px;
-}
 
+/* Style Cards */
 #cards img {
-    width: 120px;
-    height: 150px;
+    width: 30px;
+    height: 45px;
     padding: 3px;
 }
 
+
 #cards {
-    margin: 70px;
+    margin-top: 50px;
 }
 
 /*!* Clear floats after the columns *!
@@ -88,6 +114,68 @@ assignment: HW08 Pulling It All Together
     visibility: visible;
 }
 
+
 .inactive  {
     visibility: hidden;
 }
+
+
+h1 {
+    font-size: 2.3em;
+    color:blue;
+    margin-left: 194px;
+    margin-bottom: 10px;
+}
+
+
+a {
+    margin-left:194px;
+    margin-right: 20px;
+}
+
+
+form {
+    margin-top:10px;
+}
+
+
+#playerName {
+    margin-bottom: 20px;
+    margin-left: 27px;
+    width: 150px;
+}
+
+
+#numberOfCards {
+    margin-bottom: 20px;
+    width: 110px;
+}
+
+
+#saveSettingsSubmit {
+    margin-bottom: 20px;
+    margin-left: 9px;
+}
+
+
+label {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+fieldset {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
+* {
+    font-family: calibri;
+    font-size: 1em;
+}
+
+#player {
+    margin-right: 0px;
+}
+

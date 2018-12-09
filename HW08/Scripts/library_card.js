@@ -6,12 +6,12 @@
 
 // The library_card.js file should create a Card object for
 // working with a single card when it’s clicked.
-
+/**
+ * class libraryCard Attributes and methods that work with each card.
+ */
 class libraryCard {
-    // Since a new Card object will need to be created each time
-    // a card is clicked, a constructor function should be used.
     /**
-     * constructor libraryCard
+     * constructor libraryCard Creates a card Object
      * @param {object} thisTag  Represents the tag that was clicked.
      */
     constructor(thisTag) {
@@ -24,7 +24,7 @@ class libraryCard {
 
     /**
      * method IsValid Check whether the user has clicked on a card
-     // that is blank or has already been revealed.
+     * that is blank or has already been revealed.
      * @returns {boolean} Returns true if its a valid choice.
      */
     isValid() {

@@ -16,7 +16,8 @@ assignment: HW08 Pulling It All Together
   <meta name="description" content="">
   <meta name="author" content="Sherrie Teague">
   <link rel="stylesheet" href="CSS/standard.css">
-  <link type="text/css" rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/themes/blitzer/jquery-ui.css" />
+  <link type="text/css" rel="stylesheet"
+        href="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/themes/blitzer/jquery-ui.css"/>
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
   <script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/jquery-ui.min.js"></script>
 
@@ -24,123 +25,77 @@ assignment: HW08 Pulling It All Together
    proper order, so each library is included after any libraries it depends
 
    on. -->
+  <script src="Scripts/library_scores.js"></script>
   <script src="Scripts/library_settings.js" defer></script>
+  <script src="Scripts/library_cards.js"></script>
+  <script src="Scripts/library_card.js"></script>
   <script src="Scripts/main.js" defer></script>
+
 </head>
 
 <body>
-  <h1>Memory Game</h1>
-  <a href="#">New Game</a>
-  <span>Player:</span>
-  <span id="name"></span>
-  <span>High Score:</span>
-  <span id="high_score"></span>
-  <span>Correct:</span>
-  <span id="correct"></span>
+<h1>Memory Game</h1>
+<a href="#">New Game</a>
+<span>Player:</span>
+<span id="name"></span>
+<span>High Score:</span>
+<span id="high_score"></span>
+<span>Correct:</span>
+<span id="correct"></span>
 
-  <!-- Tab links -->
-  <div class="tab">
-    <button class="tablinks" onclick="openTab(event, 'cards')">Play
+<div class="game">
+<!-- Tab links -->
+<div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'cards')">Play
     Game
   </button>
-    <button class="tablinks" onclick="openTab(event, 'viewRules')">View
+  <button class="tablinks" onclick="openTab(event, 'viewRules')">View
     Rules
   </button>
-    <button class="tablinks" onclick="openTab(event, 'Settings')">Settings
+  <button class="tablinks" onclick="openTab(event, 'Settings')">Settings
   </button>
-  </div>
+</div>
 
 
-  <div id="viewRules" class="tabcontent">
-    <fieldset>
-      <legend>How to play the Memory game</legend>
-      <ul>
-        <li> The cards are placed face down. Each card has a matching card.</li>
-        <li> For each turn, the player selects two cards.</li>
-        <li> If the cards match, they are removed from the board.</li>
-        <li> If the cards don't match, they are turned face down again.</li>
-        <li> The game ends when all the cards are removed from the board.</li>
-      </ul>
-    </fieldset>
-  </div>
-  <div id="Settings" class="tabcontent">
-    <form>
-      <label for="playerName">Player Name:</label>
-      <input type="text" id="playerName" name="playerName">
-      <br/>
-      <label for="numberOfCards">Number of Cards:</label>
-      <input type="number" id="numberOfCards" name="numberOfCards" min=4 max=48 value=48 step=2>
-      <br/>
-      <input type="submit" id="saveSettingsSubmit" name="saveSettingsSubmit" value="Save Settings" class="ui-button ui-widget ui-corner-all" />
-    </form>
-  </div>
+<div id="viewRules" class="tabcontent">
+  <fieldset>
+    <legend>How to play the Memory game</legend>
+    <ul>
+      <li> The cards are placed face down. Each card has a matching card.</li>
+      <li> For each turn, the player selects two cards.</li>
+      <li> If the cards match, they are removed from the board.</li>
+      <li> If the cards don't match, they are turned face down again.</li>
+      <li> The game ends when all the cards are removed from the board.</li>
+    </ul>
+  </fieldset>
+</div>
+<div id="Settings" class="tabcontent">
+  <form>
+    <label for="playerName">Player Name:</label>
+    <input type="text" id="playerName" name="playerName">
+    <br/>
+    <label for="numberOfCards">Number of Cards:</label>
+    <input type="number" id="numberOfCards" name="numberOfCards" min=4 max=48
+           value=48 step=2>
+    <br/>
+    <input type="submit" id="saveSettingsSubmit" name="saveSettingsSubmit"
+           value="Save Settings" class="ui-button ui-widget ui-corner-all"/>
+  </form>
+</div>
 
-  <div id="cards" class="tabcontent">
-    <div>
-      <a id="card_1" href="#"><img  src="images/back.png" alt=""></a>
-      <a id="card_2" href="#"><img  src="images/back.png" alt=""></a>
-      <a id="card_3" href="#"><img  src="images/back.png" alt=""></a>
-      <a id="card_4" href="#"><img  src="images/back.png" alt=""></a>
-      <a id="card_5" href="#"><img  src="images/back.png" alt=""></a>
-      <a id="card_6" href="#"><img  src="images/back.png" alt=""></a>
-      <a id="card_7" href="#"><img  src="images/back.png" alt=""></a>
-      <a id="card_8" href="#"><img  src="images/back.png" alt=""></a>
-    </div>
-    <div>
-      <a id="card_9" href="#"><img  src="images/back.png" alt=""></a>
-      <a id="card_10" href="#"><img  src="images/back.png" alt=""></a>
-      <a id="card_11" href="#"><img  src="images/back.png" alt=""></a>
-      <a id="card_12" href="#"><img src="images/back.png" alt=""></a>
-      <a id="card_13" href="#"><img  src="images/back.png" alt=""></a>
-      <a id="card_14" href="#"><img  src="images/back.png" alt=""></a>
-      <a id="card_15" href="#"><img  src="images/back.png" alt=""></a>
-      <a id="card_16" href="#"><img  src="images/back.png" alt=""></a>
-    </div>
-    <div>
-      <a id="card_17" href="#"><img  src="images/back.png" alt=""></a>
-      <a id="card_18" href="#"><img  src="images/back.png" alt=""></a>
-      <a id="card_19" href="#"><img  src="images/back.png" alt=""></a>
-      <a id="card_20" href="#"><img  src="images/back.png" alt=""></a>
-      <a id="card_21" href="#"><img  src="images/back.png" alt=""></a>
-      <a id="card_22" href="#"><img  src="images/back.png" alt=""></a>
-      <a id="card_23" href="#"><img  src="images/back.png" alt=""></a>
-      <a id="card_24" href="#"><img  src="images/back.png" alt=""></a>
-    </div>
-    <div>
-      <a id="card_25" href="#"><img  src="images/back.png" alt=""></a>
-      <a id="card_26" href="#"><img  src="images/back.png" alt=""></a>
-      <a id="card_27" href="#"><img  src="images/back.png" alt=""></a>
-      <a id="card_28" href="#"><img  src="images/back.png" alt=""></a>
-      <a id="card_29" href="#"><img  src="images/back.png" alt=""></a>
-      <a id="card_30" href="#"><img  src="images/back.png" alt=""></a>
-      <a id="card_31" href="#"><img  src="images/back.png" alt=""></a>
-      <a id="card_32" href="#"><img  src="images/back.png" alt=""></a>
-    </div>
-    <div>
-      <a id="card_33" href="#"><img  src="images/back.png" alt=""></a>
-      <a id="card_34" href="#"><img  src="images/back.png" alt=""></a>
-      <a id="card_35" href="#"><img  src="images/back.png" alt=""></a>
-      <a id="card_36" href="#"><img  src="images/back.png" alt=""></a>
-      <a id="card_37" href="#"><img  src="images/back.png" alt=""></a>
-      <a id="card_38" href="#"><img  src="images/back.png" alt=""></a>
-      <a id="card_39" href="#"><img  src="images/back.png" alt=""></a>
-      <a id="card_40" href="#"><img  src="images/back.png" alt=""></a>
-    </div>
-    <div>
-      <a id="card_41" href="#"><img  src="images/back.png" alt=""></a>
-      <a id="card_42" href="#"><img  src="images/back.png" alt=""></a>
-      <a id="card_43" href="#"><img  src="images/back.png" alt=""></a>
-      <a id="card_44" href="#"><img  src="images/back.png" alt=""></a>
-      <a id="card_45" href="#"><img  src="images/back.png" alt=""></a>
-      <a id="card_46" href="#"><img  src="images/back.png" alt=""></a>
-      <a id="card_47" href="#"><img  src="images/back.png" alt=""></a>
-      <a id="card_48" href="#"><img  src="images/back.png" alt=""></a>
-    </div>
-  </div>
+<div id="cards" class="tabcontent">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+</div>
 
-  <script>
-
-  </script>
+<!--<script>
+cards.createHTML();
+</script>-->
 </body>
 
 </html>
