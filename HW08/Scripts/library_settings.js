@@ -11,61 +11,92 @@
 // object and you don’t need to protect any private state, you can create the
 // settings object with an object literal.
 
-$(function() {
+
+// adapted from http://stackoverflow.com/a/2450976
+/**
+ * Function shuffle mixes up the array
+ * @param {array} array
+ * @returns {array} array Returns array after shuffle.
+ */
+function shuffle(array) {
+    let currentIndex = array.length, temporaryValue, randomIndex;
+
+    while (currentIndex !== 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+    }
+
+    return array;
+}
+
+var librarySettings = {
+    numberOfCards: 48
+};
+
+
+
+$(function () {
 
     var playerName = getCookie("playerName");
     if (playerName.length !== 0) {
-        $("playerName").val(playerName);
+        $("#playerName").val(playerName);
         $("#name").text(playerName);
-        alert("playerName:=" + playerName);
     } else {
         // we do not have a cookie.
-        alert("noPlayerNameCookie");
     }
 
     var numberOfCards = getCookie("numberOfCards");
-    if (numberOfCards.length !== 0) {
-        $("numberOfCards").val(numberOfCards);
-    } else {
+    if (numberOfCards.length == 0) {
         // we do not have a cookie.
+        numberOfCards = 48;
     }
 
+    // setting numberOfCards
+    $("#numberOfCards").val(numberOfCards);
+
+    librarySettings.numberOfCards = numberOfCards;
+
+    // making selected cards visible/invisible
+    const maxCards = 48;
+    var i;
+    for (i = 0; i < maxCards; i++) {
+        let thisCard = $("#card_" + (i + 1));
+        if (i < numberOfCards) {
+            // show cards
+            thisCard.toggleClass("active",true);
+            thisCard.toggleClass("inactive",false);
+        } else {
+            // hide cards
+            thisCard.toggleClass("active",false);
+            thisCard.toggleClass("inactive",true);
+        }
+    }
+
+    // getting highScore cookie
     var highScore = getCookie("highScore");
     if (highScore.length !== 0) {
-        $("highScore").val(highScore);
+        $("#highScore").val(highScore);
+        alert("highScore:=" + highScore);
     } else {
         // we do not have a cookie.
     }
 
-    $("#saveSettingSubmit").click(function() {
+    $("#saveSettingsSubmit").click(function () {
+        // create playerName cookie
         var value = $("#playerName").val();
         $("#name").text(value);
-
         create("playerName", value);
-        value = $("numberOfCards").val();
+
+        // create highScore cookie
+        value = $("#highScore").text();
+        create("highScore", value);
+
+        // create numberOfCards cookie
+        value = $("#numberOfCards").val();
         create("numberOfCards", value);
-
-        // display the correct number of cards.
-        let o = document.getElementById('playGame');
-
-        // clearing the contents of playGame
-        o.innerHTML = "";
-        let p = o.innerHTML;
-
-        //
-        var i;
-        for (i = 0; i < numberOfCards; i++) {
-
-
-
-
-
-
-
-        }
-
-        // updating elements to be displayed
-        o.innerHTML = p;
     });
 });
 

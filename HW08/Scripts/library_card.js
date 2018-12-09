@@ -4,16 +4,43 @@
 // class: Client-Side Programming
 // assignment: HW08 Pulling It All Together
 
-// The library_card.js file should create a Card object for working with a
-// single card when it’s clicked. Since a new Card object will need to be
-// created each time a card is clicked, a constructor function should be used.
-// The constructor should accept a parameter that represents the tag
-// that was clicked, and it should use the jQuery selector to get the img tag
-// that’s a child of the tag. The Card object type should have two properties
-// that store this img object and the value in the id attribute of the tag.
-// The Card object type should also include two methods. The first one should
-// check whether the user has clicked on a card that is blank or has already
-// been revealed. The second one should accept a parameter that represents the
-// first card that was clicked, and it should check if the id attribute of the
-// tag for this card is equal to the id attribute of the tag for
-// the current card.
+// The library_card.js file should create a Card object for
+// working with a single card when it’s clicked.
+
+class libraryCard {
+    // Since a new Card object will need to be created each time
+    // a card is clicked, a constructor function should be used.
+    /**
+     * constructor libraryCard
+     * @param {object} thisTag  Represents the tag that was clicked.
+     */
+    constructor(thisTag) {
+        // The img tag that is a child of the tag.
+        this.imgObject = thisTag.find("img");
+
+        // the value in the id attribute of the tag.
+        this.imgValue = thisTag.attr("id");
+    }
+
+    /**
+     * method IsValid Check whether the user has clicked on a card
+     // that is blank or has already been revealed.
+     * @returns {boolean} Returns true if its a valid choice.
+     */
+    isValid() {
+        return (this.imgValue === libraryCards.back);
+    }
+
+    /**
+     * method isMatch
+     * @param {string} thatImgValue Represents the first card that is
+     * clicked.
+     * @returns {boolean} Returns true if the cards are a match.
+     */
+    isMatch(thatImgValue) {
+        // check if the id attribute of the tag for this card is
+        // equal to the id attribute of the tag for the current card.
+        return (thatImgValue === this.imgValue);
+    }
+}
+

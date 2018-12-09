@@ -83,3 +83,11 @@ assignment: HW08 Pulling It All Together
     display: table;
     clear: both;
 }*/
+
+.active {
+    visibility: visible;
+}
+
+.inactive  {
+    visibility: hidden;
+}
