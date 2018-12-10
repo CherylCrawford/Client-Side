@@ -4,12 +4,12 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/HW08/CSS/standard.css" line="130" />
+    <bookmark url="file://$PROJECT_DIR$/HW08/CSS/standard.css" line="125" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57a67c5a-f650-4435-8edc-7f9c3b5c25e3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/HW08/CSS/standard.css" beforeDir="false" afterPath="$PROJECT_DIR$/HW08/CSS/standard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW08/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/HW08/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW08/Scripts/library_cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/HW08/Scripts/library_cards.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW08/Scripts/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/HW08/Scripts/main.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,7 +21,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.13755459">
+    <splitter split-orientation="horizontal" split-proportion="0.80131006">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -36,11 +36,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/HW08/Scripts/main.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="256">
-                  <caret line="15" column="31" lean-forward="true" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+                <state relative-caret-position="376">
+                  <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
                   </folding>
@@ -48,11 +48,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/HW08/Scripts/library_cards.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="296">
-                  <caret line="101" column="68" selection-start-line="101" selection-start-column="68" selection-end-line="101" selection-end-column="68" />
+                <state relative-caret-position="340">
+                  <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
                   </folding>
@@ -63,7 +63,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/HW08/Scripts/library_card.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="70">
+                <state relative-caret-position="460">
                   <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
@@ -88,7 +88,7 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/HW08/index.html">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="376">
@@ -97,11 +97,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/HW08/CSS/standard.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="390">
-                  <caret line="135" lean-forward="true" selection-start-line="135" selection-end-line="135" />
+                <state relative-caret-position="280">
+                  <caret line="98" column="1" lean-forward="true" selection-start-line="98" selection-start-column="1" selection-end-line="98" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
@@ -140,11 +140,11 @@
         <option value="$PROJECT_DIR$/example card game/CSS/standard.css" />
         <option value="$PROJECT_DIR$/HW08/Scripts/library_card.js" />
         <option value="$PROJECT_DIR$/HW08/Scripts/library_scores.js" />
-        <option value="$PROJECT_DIR$/HW08/Scripts/main.js" />
         <option value="$PROJECT_DIR$/HW08/Scripts/library_settings.js" />
-        <option value="$PROJECT_DIR$/HW08/Scripts/library_cards.js" />
-        <option value="$PROJECT_DIR$/HW08/CSS/standard.css" />
         <option value="$PROJECT_DIR$/HW08/index.html" />
+        <option value="$PROJECT_DIR$/HW08/CSS/standard.css" />
+        <option value="$PROJECT_DIR$/HW08/Scripts/library_cards.js" />
+        <option value="$PROJECT_DIR$/HW08/Scripts/main.js" />
       </list>
     </option>
   </component>
@@ -264,7 +264,7 @@
       <workItem from="1544058284946" duration="8419000" />
       <workItem from="1544077206371" duration="8355000" />
       <workItem from="1544128383410" duration="4546000" />
-      <workItem from="1544286277112" duration="77105000" />
+      <workItem from="1544286277112" duration="79365000" />
     </task>
     <task id="LOCAL-00001" summary="Created temperature.ts and edited index.html">
       <created>1536728278031</created>
@@ -305,7 +305,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="175894000" />
+    <option name="totallyTimeSpent" value="178154000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -525,26 +525,6 @@
     <entry file="file://$PROJECT_DIR$/HW08/standard.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/HW08/Scripts/library_card.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HW08/Scripts/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="15" column="31" lean-forward="true" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HW08/Scripts/library_scores.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="490">
@@ -565,27 +545,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/HW08/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="41" column="24" lean-forward="true" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW08/CSS/standard.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="98" column="1" lean-forward="true" selection-start-line="98" selection-start-column="1" selection-end-line="98" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/HW08/Scripts/library_cards.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="101" column="68" selection-start-line="101" selection-start-column="68" selection-end-line="101" selection-end-column="68" />
+        <state relative-caret-position="340">
+          <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HW08/CSS/standard.css">
+    <entry file="file://$PROJECT_DIR$/HW08/Scripts/library_card.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="135" lean-forward="true" selection-start-line="135" selection-end-line="135" />
+        <state relative-caret-position="460">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HW08/index.html">
+    <entry file="file://$PROJECT_DIR$/HW08/Scripts/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="376">
-          <caret line="41" column="24" lean-forward="true" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
+          <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

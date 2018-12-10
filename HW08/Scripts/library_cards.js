@@ -99,7 +99,7 @@ class libraryCards {
             let divNum = count % 8;
             let divObj = $("#cards > div").get(divNum);
             $("<a>").attr("href","#").attr("id",this).html('<img' +
-                '  src="images/back.png"  alt="" >').appendTo(divObj);
+                '  src="images/back.png"  alt="" >').attr("onclick","handleCardClick()").appendTo(divObj);
             count = incInt(count);
         }));
 

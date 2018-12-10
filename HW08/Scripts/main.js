@@ -16,9 +16,24 @@ var scores = new Scores;
 var cards = new libraryCards();
 cards.preload();
 
+
 var cardsArray = [
 
 ];
+
+function handleCardClick(theTag)    {
+    alert("card was clicked" + theTag);
+    var thisCard = new libraryCard(theTag);
+    if (thisCard.isValid())  {
+        thisCard.fade();
+
+    }
+
+
+
+
+
+}
 
 
 function openTab(evt, tabName) {
