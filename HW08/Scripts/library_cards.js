@@ -91,19 +91,18 @@ class libraryCards {
             this.innerHTML = "";
         });
 
+
         // Create each card.
         let count = 0;
         $.each(this.cardsArray,(function () {
             //  Need to count 8 cards and go to the next div inside of cards.
             let divNum = count % 8;
             let divObj = $("#cards > div").get(divNum);
-            $('<a href="#" />').attr('id', this).appendTo(divObj.innerHTML);
+            $("<a>").attr("href","#").attr("id",this).html('<img' +
+                '  src="images/back.png"  alt="" >').appendTo(divObj);
             count = incInt(count);
         }));
 
-        // Turning all cards on to their back.
-        $("#cards a").innerHTML = '<img  src="images/back.png"' +
-            ' alt="" >';
     }
 
     /**

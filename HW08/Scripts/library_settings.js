@@ -60,6 +60,7 @@ $(function () {
 
 
     scores.retrieveScores();
+    cards.storeSrc();
     cards.createHTML();
 
 
