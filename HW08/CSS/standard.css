@@ -130,7 +130,7 @@ h1 {
 
 a {
     margin-left:194px;
-    margin-right: 20px;
+    padding-right: 50px;
 }
 
 
@@ -181,5 +181,9 @@ fieldset {
 
 #high_score {
     margin-right: 15px;
-    margin-left: 25px;
+    margin-left: 40px;
+}
+
+header span:nth-child(5) {
+    padding-left: 50px;
 }

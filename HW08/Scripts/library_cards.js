@@ -60,9 +60,9 @@ class libraryCards {
      */
     preload() {
         // adapted from https://stackoverflow.com/questions/476679/preloading-images-with-jquery
-        this.imgArray.each(function () {
+        $.each(this.imgArray,(function () {
             $('<img />').attr('src', this).appendTo('body').css('display', 'none');
-        });
+        }));
     }
 
     /**
@@ -93,13 +93,13 @@ class libraryCards {
 
         // Create each card.
         let count = 0;
-        this.cardsArray.each(function () {
+        $.each(this.cardsArray,(function () {
             //  Need to count 8 cards and go to the next div inside of cards.
             let divNum = count % 8;
             let divObj = $("#cards > div").get(divNum);
             $('<a href="#" />').attr('id', this).appendTo(divObj);
             count = incInt(count);
-        });
+        }));
 
         // Turning all cards on to their back.
         $("#cards a").prop(innerHTML, '<img  src="images/back.png" alt="">');

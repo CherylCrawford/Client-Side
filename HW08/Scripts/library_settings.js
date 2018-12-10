@@ -60,6 +60,7 @@ $(function () {
 
 
     scores.retrieveScores();
+    cards.createHTML();
 
 
     $("#saveSettingsSubmit").click(function() {
