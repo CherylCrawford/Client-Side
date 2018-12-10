@@ -58,21 +58,6 @@ $(function () {
 
     librarySettings.numberOfCards = numberOfCards;
 
-    // making selected cards visible/invisible
-    const maxCards = 48;
-    var i;
-    for (i = 0; i < maxCards; i++) {
-        let thisCard = $("#card_" + (i + 1));
-        if (i < numberOfCards) {
-            // show cards
-            thisCard.toggleClass("active",true);
-            thisCard.toggleClass("inactive",false);
-        } else {
-            // hide cards
-            thisCard.toggleClass("active",false);
-            thisCard.toggleClass("inactive",true);
-        }
-    }
 
     scores.retrieveScores();
 

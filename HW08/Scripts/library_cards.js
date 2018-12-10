@@ -146,5 +146,3 @@ class libraryCards {
     }
 }
 
-var cards = new libraryCards();
-cards.preload();

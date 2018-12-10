@@ -13,6 +13,9 @@ for the cards that will be displayed on the board (two for
     each image).*/
 
 var scores = new Scores;
+var cards = new libraryCards();
+cards.preload();
+
 var cardsArray = [
 
 ];
