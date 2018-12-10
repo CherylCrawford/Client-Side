@@ -97,12 +97,13 @@ class libraryCards {
             //  Need to count 8 cards and go to the next div inside of cards.
             let divNum = count % 8;
             let divObj = $("#cards > div").get(divNum);
-            $('<a href="#" />').attr('id', this).appendTo(divObj);
+            $('<a href="#" />').attr('id', this).appendTo(divObj.innerHTML);
             count = incInt(count);
         }));
 
         // Turning all cards on to their back.
-        $("#cards a").prop(innerHTML, '<img  src="images/back.png" alt="">');
+        $("#cards a").innerHTML = '<img  src="images/back.png"' +
+            ' alt="" >';
     }
 
     /**
