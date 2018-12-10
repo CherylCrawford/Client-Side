@@ -21,17 +21,14 @@ var cardsArray = [
 
 ];
 
-function handleCardClick(theTag)    {
-    alert("card was clicked" + theTag);
-    var thisCard = new libraryCard(theTag);
+function handleCardClick(event)    {
+    alert("card fade first");
+    var thisCard = new libraryCard($(event.target));
     if (thisCard.isValid())  {
-        thisCard.fade();
+        alert("card fade");
+        cards.fade(thisCard);
 
     }
-
-
-
-
 
 }
 

@@ -99,7 +99,7 @@ class libraryCards {
             let divNum = count % 8;
             let divObj = $("#cards > div").get(divNum);
             $("<a>").attr("href","#").attr("id",this).html('<img' +
-                '  src="images/back.png"  alt="" >').attr("onclick","handleCardClick()").appendTo(divObj);
+                '  src="images/back.png"  alt="" >').click(handleCardClick).appendTo(divObj);
             count = incInt(count);
         }));
 
@@ -111,6 +111,8 @@ class libraryCards {
      */
     fade(card) {
         // Card fades-out in half a second.
+        alert("enter fade card");
+        alert($.type(card.imgObject));
         card.imgObject.fadeOut(500);
 
         // Card flips over.
@@ -125,6 +127,7 @@ class libraryCards {
 
         // Card fades-in in half a second.
         card.imgObject.fadeIn(500);
+        alert("exit fade card");
     }
 
     /**
