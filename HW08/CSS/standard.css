@@ -93,14 +93,14 @@ body {
 
 /* Style Cards */
 #cards img {
-    width: 30px;
-    height: 45px;
+    width: 68px;
+    height: 80px;
     padding: 3px;
 }
 
 
 #cards {
-    margin-top: 50px;
+    margin-top: 12px;
 }
 
 /*!* Clear floats after the columns *!
@@ -128,7 +128,7 @@ h1 {
 }
 
 
-a {
+#newGame {
     margin-left:194px;
     padding-right: 50px;
 }
