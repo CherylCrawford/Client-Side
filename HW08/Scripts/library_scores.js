@@ -4,7 +4,7 @@
 // class: Client-Side Programming
 // assignment: HW08 Pulling It All Together
 
-var scores = new Scores;
+
 
 
 /**
@@ -12,33 +12,33 @@ var scores = new Scores;
  */
 class Scores {
     /**
-     * numberOfTurns Keeps track of the number of turns.
-     * @type {number}
+     * constructor Scores Initialize three variables
      */
-    numberOfTurns = 0;
+    constructor() {
+        /**
+         * numberOfTurns Keeps track of the number of turns.
+         * @type {number}
+         */
+        this.numberOfTurns = 0;
 
-    /**
-     * numberOfMatches Saves number of turns that result in matches.
-     * @type {number}
-     */
-    numberOfMatches = 0;
+        /**
+         * numberOfMatches Saves number of turns that result in matches.
+         * @type {number}
+         */
+        this.numberOfMatches = 0;
 
-
-    /**
-     * allScores List of all the scores.
-     * @type {Array}
-     */
-    allScores = [];
-
-
+        /**
+         * allScores List of all the scores.
+         * @type {Array}
+         */
+        this.allScores = [];
+    }
     /**
      * method saveScores Saves the scores from local storage.
      */
     saveScores() {
         // create allScores cookie
-        create("allScores", this.allScores);
-
-
+        create("allScores", this.allScores)
     };
 
 
@@ -54,8 +54,8 @@ class Scores {
         } else {
             // we do not have a cookie.
         }
-
     };
+
 
     /**
      * method compareScores Compares scores from local storage.
@@ -63,7 +63,6 @@ class Scores {
      */
     compareScores() {
         return Math.max(this.allScores);
-
     };
 
 
@@ -103,7 +102,6 @@ function incInt(theVar) {
  */
 function isBoardEmpty() {
     return false;
-
 }
 
 
@@ -122,3 +120,4 @@ function percentCorrect() {
 
     return retVal;
 }
+

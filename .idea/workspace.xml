@@ -8,12 +8,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57a67c5a-f650-4435-8edc-7f9c3b5c25e3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HW08/CSS/standard.css" beforeDir="false" afterPath="$PROJECT_DIR$/HW08/CSS/standard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW08/Scripts/library_card.js" beforeDir="false" afterPath="$PROJECT_DIR$/HW08/Scripts/library_card.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HW08/Scripts/library_cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/HW08/Scripts/library_cards.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HW08/Scripts/library_scores.js" beforeDir="false" afterPath="$PROJECT_DIR$/HW08/Scripts/library_scores.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HW08/Scripts/library_settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/HW08/Scripts/library_settings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW08/Scripts/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/HW08/Scripts/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW08/WebHW8.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW08/help_withHW08.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW08/hw08 links to examples.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/HW08/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/HW08/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW08/standard.css" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,14 +30,17 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.3544396">
+    <splitter split-orientation="horizontal" split-proportion="0.65065503">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/HW08/Scripts/library_settings.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="480">
-                  <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
+                <state relative-caret-position="680">
+                  <caret line="40" column="31" lean-forward="true" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
+                  <folding>
+                    <element signature="n#!!doc" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -40,8 +48,20 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/HW08/Scripts/main.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="116">
-                  <caret line="9" selection-start-line="9" selection-end-line="9" />
+                <state relative-caret-position="280">
+                  <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+                  <folding>
+                    <element signature="n#!!doc" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/HW08/Scripts/library_cards.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1500">
+                  <caret line="75" column="71" lean-forward="true" selection-start-line="75" selection-start-column="71" selection-end-line="75" selection-end-column="71" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
                   </folding>
@@ -52,17 +72,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/HW08/Scripts/library_card.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="400">
-                  <caret line="24" column="7" lean-forward="true" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/HW08/Scripts/library_cards.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="180">
-                  <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+                <state relative-caret-position="460">
+                  <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
                   </folding>
@@ -70,11 +81,14 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/HW08/Scripts/library_scores.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1660">
-                  <caret line="87" selection-start-line="87" selection-end-line="87" />
+                <state relative-caret-position="160">
+                  <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
+                  <folding>
+                    <element signature="n#!!doc" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -86,8 +100,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/HW08/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="520">
-                  <caret line="38" column="20" lean-forward="true" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
+                <state relative-caret-position="280">
+                  <caret line="35" column="6" lean-forward="true" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
                 </state>
               </provider>
             </entry>
@@ -95,8 +109,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/HW08/CSS/standard.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2380">
-                  <caret line="134" lean-forward="true" selection-start-line="134" selection-end-line="134" />
+                <state relative-caret-position="460">
+                  <caret line="176" lean-forward="true" selection-start-line="176" selection-end-line="176" />
                 </state>
               </provider>
             </entry>
@@ -133,13 +147,13 @@
         <option value="$PROJECT_DIR$/example card game/index.html" />
         <option value="$PROJECT_DIR$/example card game/cardgame.js" />
         <option value="$PROJECT_DIR$/example card game/CSS/standard.css" />
-        <option value="$PROJECT_DIR$/HW08/Scripts/main.js" />
-        <option value="$PROJECT_DIR$/HW08/Scripts/library_settings.js" />
-        <option value="$PROJECT_DIR$/HW08/Scripts/library_scores.js" />
         <option value="$PROJECT_DIR$/HW08/Scripts/library_card.js" />
-        <option value="$PROJECT_DIR$/HW08/Scripts/library_cards.js" />
-        <option value="$PROJECT_DIR$/HW08/index.html" />
         <option value="$PROJECT_DIR$/HW08/CSS/standard.css" />
+        <option value="$PROJECT_DIR$/HW08/Scripts/library_settings.js" />
+        <option value="$PROJECT_DIR$/HW08/index.html" />
+        <option value="$PROJECT_DIR$/HW08/Scripts/library_cards.js" />
+        <option value="$PROJECT_DIR$/HW08/Scripts/main.js" />
+        <option value="$PROJECT_DIR$/HW08/Scripts/library_scores.js" />
       </list>
     </option>
   </component>
@@ -194,7 +208,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2018.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RunDashboard">
@@ -209,25 +223,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index.html (2)">
-    <configuration name="index.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Client-Side/HW07/submit/index.html">
+  <component name="RunManager" selected="Node.js.library_cards.js">
+    <configuration name="library_card.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/HW08/Scripts/library_card.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
-    <configuration name="index.html (2)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Client-Side/example card game/index.html">
+    <configuration name="library_cards.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/HW08/Scripts/library_cards.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
-    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Client-Side/HW07/index.html">
+    <configuration name="library_scores.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/HW08/Scripts/library_scores.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
-    <configuration name="objects.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/HW07/Scripts/objects.js" working-dir="$PROJECT_DIR$">
+    <configuration name="library_settings.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/HW08/Scripts/library_settings.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="main.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/HW08/Scripts/main.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.index.html (2)" />
-        <item itemvalue="JavaScript Debug.index.html (1)" />
-        <item itemvalue="Node.js.objects.js" />
-        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="Node.js.library_cards.js" />
+        <item itemvalue="Node.js.library_scores.js" />
+        <item itemvalue="Node.js.library_card.js" />
+        <item itemvalue="Node.js.main.js" />
+        <item itemvalue="Node.js.library_settings.js" />
       </list>
     </recent_temporary>
   </component>
@@ -255,7 +273,7 @@
       <workItem from="1544058284946" duration="8419000" />
       <workItem from="1544077206371" duration="8355000" />
       <workItem from="1544128383410" duration="4546000" />
-      <workItem from="1544286277112" duration="59024000" />
+      <workItem from="1544286277112" duration="68906000" />
     </task>
     <task id="LOCAL-00001" summary="Created temperature.ts and edited index.html">
       <created>1536728278031</created>
@@ -296,7 +314,16 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="157813000" />
+    <option name="totallyTimeSpent" value="167695000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -308,15 +335,15 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32914925" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.32914925" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49936628" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32914925" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.35639098" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5006337" side_tool="true" weight="0.40585774" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.3288889" />
       <window_info anchor="bottom" id="Inspection Results" order="13" weight="0.31659693" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -504,17 +531,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HW08/Scripts/library_scores.js">
+    <entry file="file://$PROJECT_DIR$/HW08/standard.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW08/CSS/standard.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1660">
-          <caret line="87" selection-start-line="87" selection-end-line="87" />
+        <state relative-caret-position="460">
+          <caret line="176" lean-forward="true" selection-start-line="176" selection-end-line="176" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW08/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="35" column="6" lean-forward="true" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW08/Scripts/library_settings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="31" lean-forward="true" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HW08/Scripts/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="280">
+          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW08/Scripts/library_cards.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1500">
+          <caret line="75" column="71" lean-forward="true" selection-start-line="75" selection-start-column="71" selection-end-line="75" selection-end-column="71" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
@@ -523,39 +580,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HW08/Scripts/library_card.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="24" column="7" lean-forward="true" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HW08/Scripts/library_cards.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+        <state relative-caret-position="460">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HW08/Scripts/library_settings.js">
+    <entry file="file://$PROJECT_DIR$/HW08/Scripts/library_scores.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HW08/CSS/standard.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2380">
-          <caret line="134" lean-forward="true" selection-start-line="134" selection-end-line="134" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HW08/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="38" column="20" lean-forward="true" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
+        <state relative-caret-position="160">
+          <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

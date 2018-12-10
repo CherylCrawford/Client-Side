@@ -6,8 +6,7 @@
 
 // The library_cards.js file should create a cards object that works with
 // the cards.
-var cards = new libraryCards();
-cards.preload();
+
 
 /**
  * class
@@ -147,3 +146,5 @@ class libraryCards {
     }
 }
 
+var cards = new libraryCards();
+cards.preload();

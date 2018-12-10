@@ -37,9 +37,8 @@ var librarySettings = {
 };
 
 
-
 $(function () {
-
+    alert("entering function");
     var playerName = getCookie("playerName");
     if (playerName.length !== 0) {
         $("#playerName").val(playerName);
@@ -78,13 +77,12 @@ $(function () {
     scores.retrieveScores();
 
 
-
-    $("#saveSettingsSubmit").click(function () {
+    $("#saveSettingsSubmit").click(function() {
         // create playerName cookie
         var value = $("#playerName").val();
         $("#name").text(value);
         create("playerName", value);
-
+        alert("saveSettingsSubmit:=" + value)
         scores.saveScores();
 
         // create numberOfCards cookie

@@ -11,6 +11,8 @@ by a game.*/
 /*Use a cards array to store the src attributes of the images
 for the cards that will be displayed on the board (two for
     each image).*/
+
+var scores = new Scores;
 var cardsArray = [
 
 ];
@@ -30,4 +32,4 @@ function openTab(evt, tabName) {
     }
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += "active";
-};
+}
