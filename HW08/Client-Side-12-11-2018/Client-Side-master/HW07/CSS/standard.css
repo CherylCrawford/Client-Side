@@ -1,0 +1,141 @@
+/* standard.css
+ student: Sherrie Teague
+ date: 11/18/2018 
+ class: Client-Side Programming
+ assignment: HW07 objects
+*/
+
+
+/* Body */
+
+body {
+  margin-left: 50px;
+  margin-top: 40px;
+  padding: 20px;
+  width: 400px;
+}
+
+
+/* All labels */
+
+label {
+  font-size: 1.1em;
+  color: maroon;
+  font-family: georgia;
+}
+
+
+/* Legend */
+
+legend {
+  font-size: 1.4em;
+  color: maroon;
+  font-family: georgia;
+}
+
+
+/* Form */
+
+form {
+  margin-left: 166px;
+}
+
+
+/*Number of Rolls */
+
+#rolls > label {
+  margin-left: 90px;
+}
+
+#rolls {
+  margin-top: 30px;
+  display: inline-block;
+}
+
+#numberOfRolls {
+  margin-top: 4px;
+  margin-left: 120px;
+}
+
+
+/* Section, Roll Dice, cardGameListBox */
+
+#dice {
+  display: inline-block;
+  margin-top:20px;
+  width: 300px;
+}
+
+#diceSubmit {
+  margin-bottom: 70px;
+  margin-left: 64px;
+}
+
+#cardGameListBox {
+  margin-left: 36px;
+}
+
+
+/* Value of the Roll */
+
+#valueRoll > label {
+  margin-left: 84px;
+}
+
+#valueRoll {
+  margin-top: 0px;
+}
+
+#valueRoll > label > #minRoll{
+  margin-left: 84px;
+}
+
+#thisRoll {
+  margin-left: 62px;
+  margin-top: 4px;
+}
+
+
+/* Min Row */
+
+#nRoll > label {
+  margin-left: 106px;
+}
+
+input#minRoll {
+  margin-left: 62px;
+}
+
+
+/* Max Row */
+
+#xRoll > label {
+  margin-left: 106px;
+}
+
+input#maxRoll {
+  margin-left: 62px;
+}
+
+
+/* Dice */
+
+#output {
+  margin-top: 12px;
+  margin-left: 258px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

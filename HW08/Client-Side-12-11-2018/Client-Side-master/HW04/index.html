@@ -1,0 +1,44 @@
+<!doctype html>
+<!--The Cafe - HW04 
+student - Sherrie Teague
+10/09/2018-->
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>ClientSideHW04</title>
+  <meta name="description" content="The Cafe">
+  <meta name="author" content="Sherrie Teague">
+  <link rel="stylesheet" href="CSS/standard.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- https://stackoverflow.com/questions/20180251/when-to-use-window-onload
+   * using defer rather than using window.onload
+   -->
+  <script src="Scripts/TheCafe.js" defer></script>
+</head>
+
+<body>
+  <section>
+    <img src="Images/logo.png" alt="">
+    <hr>
+    <h2>Menu</h2>
+    <p>Click an item to add it to your order</p>
+    <img src="Images/biscotti.jpg" alt="biscotti" id="biscotti">
+    <img src="Images/cappuccino.jpg" alt="cappuccino" id="cappuccino">
+    <img src="Images/coffee.jpg" alt="coffee" id="coffee">
+    <img src="Images/espresso.jpg" alt="espresso" id="espresso">
+    <img src="Images/latte.jpg" alt="latte" id="latte">
+    <img src="Images/scone.jpg" alt="scone" id="scone">
+    <h2>Your Order</h2>
+    <select id="myCafeListBox" name="myCafeListBox" size="6">
+    </select>
+    <p> Total: $<span id="totalAmount">0</span> </p>
+    <input type="button" id="placeOrderButton" name="placeOrderButton" value="Place Order" /> &nbsp;
+    <input type="button" id="clearOrderButton" name="clearOrderButton" value="Clear Order" />
+
+  </section>
+
+</body>
+
+</html>

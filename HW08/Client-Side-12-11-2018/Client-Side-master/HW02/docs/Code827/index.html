@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Template Page</title>
+	<meta name="description" content="Template Page">
+	<meta name="author" content="studentName">
+</head>
+	<body>
+		<h1>MPG Calculator</h1>
+		<script>
+			"use strict";
+				var miles = prompt("Enter the number of miles");
+				miles = parseFloat(miles);
+
+				var gallons = prompt("Enter the number of gallons");
+				gallons = parseFloat(gallons);
+
+				var mpg = miles / gallons;
+
+				//alert("MPG " + mpg);
+		</script>
+		<p>
+				Your MPG is :
+				<script>
+					"use strict";
+					document.right(mpg);
+				</script>
+
+		</p>
+	</body>
+</html>

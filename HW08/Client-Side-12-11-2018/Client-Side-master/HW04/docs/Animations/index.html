@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Template Page</title>
+		<meta name="description" content="Template Page">
+		<meta name="author" content="studentName">
+        <style>
+
+            a.reveal {
+                color: blue;
+                text-decoration: underline;
+                background-color: white;
+                font-size: .8em;
+            }
+
+            a.reveal:hover {
+                cursor: pointer;
+            }
+
+            /*p {*/
+                /*background-color: yellow;*/
+                /*color: black;*/
+            /*}*/
+
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript">
+
+            $(function() {
+                $("span.spoiler").hide();
+
+                // create the anchor elements!
+                $('<a class="reveal">Reveal Answer &gt;&gt;</a>').insertBefore(".spoiler");
+
+                $("a.reveal").click(function () {
+                   $(this).parents("p").children("span.spoiler").fadeIn(1000);
+                   $(this).parents("p").children("a.reveal").hide(600);
+                });
+            });
+
+
+            // $(function () {
+            //    $("#show").click(function () {
+            //        $("p").fadeIn(1000, function() {
+            //            $("#show").slideUp("fast");
+            //        });
+            //    });
+            // });
+		</script>
+	</head>
+	<body>
+        <p>
+            The answer to question 1 is <span class="spoiler">Answer 1</span>
+        </p>
+        <p>
+            The answer to question 2 is <span class="spoiler">Answer 2</span>
+        </p>
+        <p>
+            The answer to question 3 is <span class="spoiler">Answer 3</span>
+        </p>
+
+		<!--<input type="button" id="show" name="show" value="Show" />-->
+        <!--<p style="display: none;">Hidden p element</p>-->
+	</body>
+</html>

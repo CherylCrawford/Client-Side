@@ -1,0 +1,94 @@
+<!doctype html>
+<!--Reservation Form - HW05
+student - Sherrie Teague
+10/18/2018-->
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>ClientSideHW05</title>
+  <meta name="description" content="Reservation Form">
+  <meta name="author" content="Sherrie Teague">
+  <link rel="stylesheet" href="CSS/standard.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- https://stackoverflow.com/questions/20180251/when-to-use-window-onload
+   * using defer rather than using window.onload
+   -->
+  <script src="Scripts/ReservationForm.js" defer></script>
+</head>
+
+<body>
+  <section>
+    <form id="reservation_form">
+      <fieldset>
+        <legend>General Information</legend>
+        <label for="arrivalDateId">Arrival Date:</label>
+        <input id="arrivalDateId" type="date" name="Arrival Date" autofocus value="2018-10-26" min="2018-10-26" max="2019-12-31" /><br>
+        <label for="numberNightsId"> Nights:</label>
+        <input id="numberNightsId" type="number" name="nights" min="1"><br>
+        <label for="numberAdultsId">Adults:</label>
+        <select id="numberAdultsId">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+</select><br>
+        <label for="numberChildrenId">Children:</label>
+        <select id="numberChildrenId">
+  <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+     </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Preferences</legend>
+        <div id="roomTypeId">
+          <label for="standardId">Room Type:</label>
+          <input type="radio" id="standardId" value="Standard" name="room" checked />Standard
+          <input type="radio" id="businessId" value="Business" name="room" />Business
+          <input type="radio" id="suiteId" value="Suite" name="room" />Suite
+        </div><br>
+        <div id="bedTypeId">
+          <label for="kingId">Bed Type:</label>
+          <input type="radio" id="kingId" value="King" name="bed" checked />King
+          <input type="radio" id="doubleDoubleID" value="Double Double" name="bed" />Double Double
+        </div><br>
+
+        <input id="smokingId" type="checkbox" name="smoking" value="Smoking"> Smoking <br>
+      </fieldset>
+
+      <fieldset>
+        <legend>Contact Information</legend>
+        <label for="nameId">Name: </label>
+        <input id="nameId" type="text" required/><br>
+        <label for="emailId">Email: </label>
+        <input id="emailId" type="search" name="email" required autocomplete="off" />
+        <span class="errorMsg">Must be a valid email address.</span><br>
+        <label for="phoneId">Phone:</label>
+        <input id="phoneId" type="tel" name="phone" required title="Must be 555-555-5555" pattern="\d{3}[\-]\d{3}[\-]\d{4}" />
+        <span class="errorMsg">This field is required.</span>
+      </fieldset>
+
+      <input type="submit" id="submitButton" value="Submit Request" /> &nbsp;
+    </form>
+
+  </section>
+  <p>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Valid CSS!" />
+    </a>
+  </p>
+</body>
+
+</html>

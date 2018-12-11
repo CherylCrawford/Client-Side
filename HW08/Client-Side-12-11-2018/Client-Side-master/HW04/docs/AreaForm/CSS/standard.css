@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 90%;
+    width: 600px;
+    margin: 0 auto;
+    border: 2px solid green;
+    padding: 15px 25px;
+}
+
+h1 {
+    font-size: 150%;
+    font-variant: small-caps;
+}
+
+h2 {
+    font-size: 120%;
+    padding: .25em 0 .25em 25px;
+    cursor: pointer;
+    background: url(../Images/plus.png) no-repeat left center;
+}
+
+h2.minus {
+    background: url(../Images/minus.png) no-repeat left center;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    background-color: white;
+}
+
+a:focus, a:hover {
+    color: blue;
+    background-color: white;
+}
+
+div {
+    display: none;
+}
+
+div.open {
+    display: block;
+}
+

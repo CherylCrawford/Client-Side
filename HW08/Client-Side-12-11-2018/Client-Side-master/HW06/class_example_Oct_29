@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Template Page</title>
+		<meta name="description" content="Template Page">
+		<meta name="author" content="studentName">
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script> 
+        <script type="text/javascript"> 
+  
+            
+            $(function() {  //this means windows.onload or document ready 
+                $("#save").click(function()  {    //using #save makes sure you get that exact one on the "click" 
+                    
+                });
+            });
+            
+            function create(name, value, days) {  //this is creating our cookie function. 
+                var cookie = name + "#" + encodeURIComponent(value); 
+                
+                if (days !== undefined) {
+                    //if we actually have a value for days. 
+                    // the lifetime of the cookie is seconds = so we
+                    // do some math to calculate the number of seconds in the day
+                    cookie += "; max-age=" + days * 24 * 60 * 60; 
+                } // else we have a session cookie (ends when the browser closes) 
+                // every cookie has a path, the path / means the cookie is available
+                // to all pages within the url (example www.nwacc.edu/)
+                    cookie += "; path=/"; 
+                    document.cooie = cookie;
+                }
+                
+     </head>       
+	
+	<body>
+        <section>
+            <form id="colorform" name="colorform" action="#">
+                <input type="radio" id="red" name="color" value="red" checked" />
+                <label for="red">Red</label>
+                <br/>
+                <input type="radio" id="blue" name="color" value="blue" />
+                <label for="blue">Blue</label>
+                <br/> 
+                <input type="radio" id"green" name="color" value="green" checked" /> 
+                <label for="green">Green</label>
+                <br/>
+                <input type="button" value="Save" id="save" name="save" /> 
+            </form>                                                
+        </section>
+	</body>
+</html>

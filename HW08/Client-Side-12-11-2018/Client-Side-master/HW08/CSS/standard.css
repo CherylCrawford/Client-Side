@@ -1,0 +1,189 @@
+/*
+index.html
+student: Sherrie Teague
+date: 11/27/2018
+class: Client-Side Programming
+assignment: HW08 Pulling It All Together
+*/
+
+/*#playGame {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+}*/
+
+body {
+    margin-left: 160px;
+    width:900px;
+}
+
+/* Style Div Game */
+.game {
+    border-style: solid;
+    border-width: thin;
+    border-color: grey;
+    margin-left:194px;
+    margin-top:10px;
+    padding: 5px;
+    width:640px;
+}
+
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    margin-top: 6px;
+    margin-left: 0px;
+    width: 638px;
+}
+
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    /*float: left;*/
+    border: none;
+    outline: none;
+    /*cursor: pointer;*/
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+
+/* Create six equal columns that float next to each other */
+.memory-game {
+    box-sizing: border-box;
+    float: left;
+    padding: 10px;
+}
+
+/*doing it this way creates 6 rows with 8 columns*/
+/*.memory-game {
+    float: left;
+    padding: 10px;
+}*/
+
+/* doing it this way creates 8 rows with 6 columns*/
+/*.memory-card {
+    float: left;
+    width:12.5%;
+    padding: 0;
+}*/
+
+
+/* Style Cards */
+#cards img {
+    width: 68px;
+    height: 80px;
+    padding: 3px;
+}
+
+
+#cards {
+    margin-top: 12px;
+}
+
+/*!* Clear floats after the columns *!
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}*/
+
+.active {
+    visibility: visible;
+}
+
+
+.inactive  {
+    visibility: hidden;
+}
+
+
+h1 {
+    font-size: 2.3em;
+    color:blue;
+    margin-left: 194px;
+    margin-bottom: 10px;
+}
+
+
+#newGame {
+    margin-left:194px;
+    padding-right: 50px;
+}
+
+
+form {
+    margin-top:10px;
+}
+
+
+#playerName {
+    margin-bottom: 20px;
+    margin-left: 27px;
+    width: 150px;
+}
+
+
+#numberOfCards {
+    margin-bottom: 20px;
+    width: 110px;
+}
+
+
+#saveSettingsSubmit {
+    margin-bottom: 20px;
+    margin-left: 9px;
+}
+
+
+label {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+fieldset {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
+* {
+    font-family: calibri;
+    font-size: 1em;
+}
+
+#player {
+    margin-right: 0px;
+}
+
+#high_score {
+    margin-right: 15px;
+    margin-left: 40px;
+}
+
+header span:nth-child(5) {
+    padding-left: 50px;
+}

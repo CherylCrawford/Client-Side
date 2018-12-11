@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: SalesTaxAndChangeCalculator.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: SalesTaxAndChangeCalculator.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>// SalesTaxAndChangeCalculator.js
+// author: Sherrie Teague
+// assignment: HW03 9/26/2018
+"use strict";
+
+//helper function
+function $(id) {
+  return document.getElementById(id);
+}
+
+// function clearEntry is an event handler for the clear button
+function clearEntry() {
+  $("subtotal").value = "";
+  $("taxRate").value = "";
+  $("salesTax").value = "";
+  $("total").value = "";
+  $("changeDue").value = "";
+  $("quarters").value = "";
+  $("dimes").value = "";
+  $("nickels").value = "";
+  $("pennies").value = "";
+  $("subtotal").focus();
+}
+
+// function processEntries gets the user entries, calculates the sales tax and total, and displays those results in the text boxes.
+function processEntries() {
+  if (isValidSalesTax()) {
+    //get the data from the form! 
+    var subtotal = parseFloat($("subtotal").value);
+    var taxRate = parseFloat($("taxRate").value);
+
+    // calculate the Sales Tax. 
+    var salesTax = calcSalesTax(subtotal, taxRate);
+    var total = calcTotal(subtotal, salesTax);
+
+    // Display the result on the form.
+    $("salesTax").value = salesTax.toFixed(2);
+    $("total").value = total.toFixed(2);
+  } // else, the form is not valid, doNothing();
+}
+
+/** is valid sales tax.
+ *  @return {boulean}.
+ */
+function isValidSalesTax() {
+  var subtotalElement = $("subtotal");
+  var subtotal = parseFloat(subtotalElement.value);
+  if (isNaN(subtotal) || subtotal &lt;= 0.0 || subtotal > 9999) {
+    subtotalElement.value = "";
+    alert("subtotal must be > 0 and &lt; 10000");
+    subtotalElement.focus();
+    return false;
+  } // else, subtotal is fine, doNothing();
+
+  var taxRateElement = $("taxRate");
+  var taxRate = parseFloat(taxRateElement.value);
+  if (isNaN(taxRate) || taxRate &lt;= 0.0 || taxRate >= 12) {
+    taxRateElement.value = "";
+    alert("Tax Rate must be > 0 and &lt; 12");
+    taxRateElement.focus();
+    return false;
+  } // else, taxRate is fine, doNothing();
+
+  return true;
+}
+
+/** calcSalesTax 
+ *  @param {number} subtotal,
+ *  @param {number} taxRate,
+ *  @return {number} salesTax. 
+ */
+function calcSalesTax(subtotal, taxRate) {
+  const percent = 100.0
+  var salesTax = subtotal * taxRate / percent;
+  return salesTax;
+}
+
+/** calcTotal
+ *  @param {number} subtotal,
+ *  @param {number} salesTax,
+ *  @return {number} total. 
+ */
+function calcTotal(subtotal, salesTax) {
+  var total = subtotal + salesTax;
+  return total;
+}
+
+/** isValidChange
+ *  @return {boulean} is changeDue a valid number. 
+ */
+function isValidChange() {
+  var changeDueElement = $("changeDue");
+  var changeDue = parseInt(changeDueElement.value);
+  if (isNaN(changeDue) || changeDue &lt; 0.0 || changeDue > 99) {
+    changeDueElement.value = "";
+    alert("Change Due must be between 0 and 99");
+    changeDueElement.focus();
+    return false;
+  } // else, changeDue is fine, doNothing();
+
+  return true;
+}
+
+// function processEntry is an event handler for the makeChangeButton. 
+function processEntry() {
+  if (isValidChange()) {
+    //get the data from the form! 
+    var changeDue =
+      parseFloat($("changeDue").value);
+
+    // calculating change due   http://2ality.com/2013/01/parseint.html
+    var quarters = Math.floor(changeDue / 25);
+    changeDue = changeDue % 25;
+    var dimes = Math.floor(changeDue / 10);
+    changeDue = changeDue % 10;
+    var nickels = Math.floor(changeDue / 5);
+    var pennies = changeDue % 5;
+
+    // display the result on the form.
+    $("quarters").value = quarters;
+    $("dimes").value = dimes;
+    $("nickels").value = nickels;
+    $("pennies").value = pennies;
+  } // else, the form is not valid, doNothing();
+}
+
+// window.onload connects event handlers. 
+window.onload = function () {
+  $("calculateButton").onclick = processEntries;
+  $("clearButton").onclick = clearEntry;
+  $("makeChangeButton").onclick = processEntry;
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#calcSalesTax">calcSalesTax</a></li><li><a href="global.html#calcTotal">calcTotal</a></li><li><a href="global.html#isValidChange">isValidChange</a></li><li><a href="global.html#isValidSalesTax">isValidSalesTax</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Tue Sep 25 2018 21:19:15 GMT-0500 (Central Daylight Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

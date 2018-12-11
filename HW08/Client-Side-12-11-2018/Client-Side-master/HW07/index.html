@@ -1,0 +1,77 @@
+<!-- index.html
+ student: Sherrie Teague
+ date: 11/18/2018
+ class: Client-Side Programming
+ assignment: HW07 objects
+-->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Web Client-Side Programming HW07 Objects </title>
+  <meta name="description" content="Web Client-Side Programming HW07 Objects">
+  <meta name="author" content="Sherrie Teague">
+  <link rel="stylesheet" href="CSS/standard.css">
+  <link type="text/css" rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/themes/blitzer/jquery-ui.css" />
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="Scripts/library_die.js"></script>
+  <script src="Scripts/objects.js" defer></script>
+</head>
+
+<body>
+  <section>
+    <form id="diceForm" name="diceForm" action="#">
+      <fieldset>
+        <legend>Select Dice</legend>
+        <select name="shape" id="shape">
+        <option value="0" selected="selected">D4</option>
+        <option value="1">D6</option>
+        <option value="2">D8</option>
+        <option value="3">D10</option>
+        <option value="4">D12</option>
+        <option value="5">D20</option>
+      </select>
+      </fieldset>
+
+      <!-- input type "spinner"  https://www.w3schools.com/html/tryit.asp?-->
+      <div id="rolls">
+        <label for="numberOfRolls">Number of Rolls:</label>
+        <input type="number" id="numberOfRolls" name="quantity" min="1" max="20">
+      </div>
+      <br/>
+      <section id="dice">
+        <input type="submit" id="diceSubmit" name="diceSubmit" value="Roll Dice" class="ui-button ui-widget ui-corner-all" />
+        <select id="cardGameListBox" name="cardNameListBox" size="6">
+      </select>
+      </section>
+
+
+      <br/>
+
+      <div id="valueRoll">
+        <label for="thisRoll">Value of the Roll:</label>
+        <input type="text" id="thisRoll" name="value" disabled/>
+      </div>
+      <br/>
+      <div id="nRoll">
+        <label for="minRoll">Min Roll:</label>
+        <input type="text" id="minRoll" name="minRoll" disabled/>
+      </div>
+      <br/>
+      <div id="xRoll">
+        <label for="maxRoll">Max Roll:</label>
+        <input type="text" id="maxRoll" name="maxRoll" disabled/>
+      </div>
+      <br/>
+    </form>
+  </section>
+
+
+  <div id="output"></div>
+
+</body>
+
+</html>

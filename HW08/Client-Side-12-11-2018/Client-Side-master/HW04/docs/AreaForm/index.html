@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Template Page</title>
+		<meta name="description" content="Template Page">
+		<meta name="author" content="studentName">
+        <link rel="stylesheet" href="CSS/standard.css" type="text/css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="Scripts/area.js" type="text/javascript"></script>
+    </head>
+	<body>
+        <main id="areaCalculator">
+        	<h1>Tetrahedron Calculator</h1>
+			<form id="calculatorForm" name="calculatorForm">
+				<label for="edge">Edge : </label>
+				<input type="text" id="edge" name="edge" />
+				<span>*</span>
+				<br />
+				<label for="area">Area : </label>
+				<input type="text" id="area" name="area" disabled/>
+				<br />
+				<input type="button" id="submitButton" value="Submit" />
+				&nbsp;
+				<input type="button" id="clearButton" value="Clear" />
+			</form>
+        </main>
+	</body>
+</html>

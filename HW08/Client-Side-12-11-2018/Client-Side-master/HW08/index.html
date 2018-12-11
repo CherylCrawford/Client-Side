@@ -1,0 +1,105 @@
+<!--
+index.html
+student: Sherrie Teague
+date: 11/27/2018
+class: Client-Side Programming
+assignment: HW08 Pulling It All Together
+-->
+
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Web Client-Side Programming HW07 Objects </title>
+  <meta name="description" content="">
+  <meta name="author" content="Sherrie Teague">
+  <link rel="stylesheet" href="CSS/standard.css">
+  <link type="text/css" rel="stylesheet"
+        href="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/themes/blitzer/jquery-ui.css"/>
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/jquery-ui.min.js"></script>
+
+  <!-- The library files should be included in the index.html file in the
+   proper order, so each library is included after any libraries it depends
+
+   on. -->
+  <script src="Scripts/library_scores.js"></script>
+  <script src="Scripts/library_settings.js" defer></script>
+  <script src="Scripts/library_cards.js" defer></script>
+  <script src="Scripts/library_card.js" defer></script>
+  <script src="Scripts/main.js" defer></script>
+
+</head>
+
+<body>
+<header>
+<h1>Memory Game</h1>
+<a href="#" id="newGame">New Game</a>
+<span>Player:</span>
+<span id="name"></span>
+<span>High Score:</span>
+<span id="high_score"></span>
+<span>Correct:</span>
+<span id="correct"></span>
+</header>
+
+<div class="game">
+<!-- Tab links -->
+<div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'cards')">Play
+    Game
+  </button>
+  <button class="tablinks" onclick="openTab(event, 'viewRules')">View
+    Rules
+  </button>
+  <button class="tablinks" onclick="openTab(event, 'Settings')">Settings
+  </button>
+</div>
+
+
+<div id="viewRules" class="tabcontent">
+  <fieldset>
+    <legend>How to play the Memory game</legend>
+    <ul>
+      <li> The cards are placed face down. Each card has a matching card.</li>
+      <li> For each turn, the player selects two cards.</li>
+      <li> If the cards match, they are removed from the board.</li>
+      <li> If the cards don't match, they are turned face down again.</li>
+      <li> The game ends when all the cards are removed from the board.</li>
+    </ul>
+  </fieldset>
+</div>
+<div id="Settings" class="tabcontent">
+  <form>
+    <label for="playerName">Player Name:</label>
+    <input type="text" id="playerName" name="playerName">
+    <br/>
+    <label for="numberOfCards">Number of Cards:</label>
+    <input type="number" id="numberOfCards" name="numberOfCards" min=4 max=48
+           value=48 step=2>
+    <br/>
+    <input type="submit" id="saveSettingsSubmit" name="saveSettingsSubmit"
+           value="Save Settings" class="ui-button ui-widget ui-corner-all"/>
+  </form>
+</div>
+
+<div id="cards" class="tabcontent">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+</div>
+
+<script>
+
+</script>
+
+</body>
+
+</html>
+

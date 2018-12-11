@@ -1,0 +1,95 @@
+/* standard.css
+ * student: Sherrie Teague 
+ * date: 10/18/2018
+ * class: Client-Side Programming 
+ * assignment: Reservation Form HW05
+*/ 
+
+legend { 
+    color: blue;
+  font-weight: bold;
+    display: block;
+    padding-left: 2px;
+    padding-right: 2px;
+    border: none;
+}
+
+fieldset {
+  color: darkslategray;
+  padding: 10px;
+  margin: 20px;
+}
+
+form {
+  width:560px;
+}
+
+input,select {
+  margin: 6px; 
+  margin-right: 2px;
+}
+
+div {
+  display: inline-block;
+  margin: 4px;
+}
+
+#smokingId {
+  margin-left: 1px; 
+}
+
+.errorMsg {
+  color: #B00020;
+  padding-left: 10px; 
+}
+
+#submitButton {
+  margin: 0 0 0 20px;
+  border: 2px solid darkslategray;
+  padding: 4px 32px 4px 32px; 
+}
+
+.width40 {
+  width:100px;
+  color:blue;
+}
+
+#arrivalDateId {
+  margin-left: 5px;
+  padding-right: 28px;
+}
+
+#numberNightsId {
+  margin-left: 44px; 
+  
+}
+
+#numberAdultsId {
+  margin-left: 44px; 
+  padding-right: 6px;
+}
+
+#numberChildrenId {
+  margin-left:35px;
+  padding-right: 6px;
+}
+
+#bedTypeId {
+  padding-left: 15px;
+}
+
+#roomTypeId {
+  padding-left: 2px; 
+}
+
+#nameId, #emailId, #phoneId {
+  margin-left: 48px;
+}
+
+.valid {
+  color: black;
+}
+
+.invalid {
+  color: #bb0020; 
+}

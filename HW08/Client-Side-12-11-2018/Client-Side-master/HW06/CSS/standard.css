@@ -1,0 +1,57 @@
+body {
+  margin-left: 40px;
+  width: 650px;
+  border-style: solid;
+  border-color: blue;
+  padding: 20px;
+
+}
+
+fieldset {
+  margin-top: 20px;
+  padding: 0px;
+  width: 306.5px;
+}
+
+
+
+input#submit {
+  margin-left: 20px;
+}
+
+#arrival_date {
+  margin-bottom: 10px;
+}
+
+#nights {
+  margin-bottom: 10px;
+  margin-left: 34px;
+}
+
+#adults {
+  margin-bottom: 10px;
+  margin-left: 34px;
+}
+
+#children {
+  margin-left: 18px;
+}
+
+#smoking {
+  margin-top: 14px;
+  margin-left: -1px;
+}
+
+#name {
+  margin-bottom: 10px;
+  margin-left: 16px;
+}
+
+#email {
+  margin-bottom: 10px;
+  margin-left: 18px;
+}
+
+#phone {
+  margin-left: 10px;
+}

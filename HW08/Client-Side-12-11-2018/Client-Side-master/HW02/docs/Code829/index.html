@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Template Page</title>
+	<meta name="description" content="Template Page">
+	<meta name="author" content="studentName">
+</head>
+	<body>
+		<script>
+			"use strict";
+		
+			var miles = prompt("Enter the number of miles");
+			miles = parseFloat(miles);
+			
+			var gallons = prompt("Enter the number of gallons");
+			gallons = parseFloat(gallons);
+			
+			var isValid = !isNaN(miles) && miles > 0 &&
+						  !isNaN(gallons) && gallons > 0;
+			
+			var mpg = 0.0;
+			if (isValid) {
+				mpg = miles / gallons;
+			} // else, miles or gallons is invalid doNothing();
+			
+			//var mpg = 0.0;
+			//if (!isNaN(miles) && !isNaN(gallons)) {
+			//	mpg = miles / gallons;
+			//} else {
+			//	mpg = 0.0;
+			//}
+			
+		</script>
+		<p>
+			The MPG is : <script> "use strict"; document.write(mpg); </script>
+		</p>
+	</body>
+</html>
