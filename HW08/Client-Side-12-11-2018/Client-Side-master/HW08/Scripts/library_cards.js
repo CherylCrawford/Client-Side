@@ -129,10 +129,10 @@ class libraryCards {
     }
 
     /**
-     * method slide Flips a card using a slide effect.
+     * method slide Moves a card using a slide effect.
      * @param {libraryCard} card The card that needs to slide away.
      */
-    slide(card) {
+   /* slide(card) {
         card.imgObject.animate({
             left: '-50%'
         }, 500, function () {
@@ -144,6 +144,8 @@ class libraryCards {
             {left: '50%'},
             500
         );
-    }
+    }*/
+
+    
 }
 
